@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "id": "project-task-decomposer",
+      "path": "skills/project-task-decomposer",
+      "name": "project-task-decomposer",
+      "version": "1.1.0",
+      "description": "Use when converting a PRD, product handoff, spec, architecture brief, roadmap, or implementation plan into a versioned, dependency-aware task corpus (hundreds to thousands of leaf tasks) for a Software Orchestrator. Supports PRD_ONLY, PRD_PLUS_REPO, and CORPUS_UPDATE. Does not implement the product or permanently assign models.",
+      "file_count": 75,
+      "platforms": [
+        "grok-build",
+        "hermes",
+        "codex-agents"
+      ],
+      "category": "orchestration"
+    },
+    {
+      "id": "software-orchestrator",
+      "path": "skills/software-orchestrator",
+      "name": "software-orchestrator",
+      "version": "0.3.0",
+      "description": "Use when invoking Software Orchestrator as a /goal-style run with an attached plan/PRD/doc until every in-scope item is verified. Includes cold-start priors for host models (Cline-pass, Antigravity, Kilo free): strengths, thinking levels, specialty routing. Grok orchestrates; workers execute; live outcomes update the capability store.",
+      "file_count": 23,
+      "platforms": [
+        "grok-build",
+        "hermes",
+        "codex-agents"
+      ],
+      "category": "orchestration"
+    }
+  ]
+}
