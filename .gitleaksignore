@@ -1,0 +1,31 @@
+# Reviewed 2026-07-22: static credential/JWT examples in upstream reference material.
+# Keep this narrow list; new findings must be reviewed before being added.
+skills/apk-reverse/references/apk-security-checklist.md:curl-auth-header:178
+skills/cloudflare/references/argo-smart-routing/README.md:curl-auth-header:13
+skills/cloudflare/references/argo-smart-routing/api.md:curl-auth-header:27
+skills/cloudflare/references/argo-smart-routing/api.md:curl-auth-header:84
+skills/cloudflare/references/bindings/patterns.md:generic-api-key:182
+skills/cloudflare/references/bindings/patterns.md:generic-api-key:82
+skills/cloudflare/references/pipelines/api.md:curl-auth-header:113
+skills/hindsight-docs/references/developer/configuration.md:curl-auth-header:1005
+skills/hindsight-docs/references/developer/configuration.md:generic-api-key:501
+skills/hindsight-docs/references/developer/development.md:generic-api-key:54
+skills/hindsight-docs/references/developer/mcp-server.md:curl-auth-header:70
+skills/hindsight-docs/references/sdks/embed.md:generic-api-key:135
+skills/pentest-tools/src-hunter/references/payloader/by-category/web/api安全.md:curl-auth-header:914
+skills/pentest-tools/src-hunter/references/payloader/by-category/web/api安全.md:jwt:918
+skills/pentest-tools/src-hunter/references/payloader/by-category/web/websocket安全.md:generic-api-key:373
+skills/pentest-tools/src-hunter/references/payloader/by-category/web/框架漏洞.md:curl-auth-user:1764
+skills/pentest-tools/src-hunter/references/payloader/by-category/web/缓存与cdn安全.md:curl-auth-user:328
+skills/pentest-tools/src-hunter/references/payloader/by-category/web/认证漏洞.md:jwt:1588
+skills/pentest-tools/src-hunter/references/payloader/raw/web.json:jwt:19520
+skills/pentest-tools/src-hunter/references/payloader/raw/web.json:jwt:22540
+skills/pentest-tools/src-hunter/references/playbooks/api-rest.md:curl-auth-header:960
+skills/pentest-tools/src-hunter/references/playbooks/api-rest.md:generic-api-key:1958
+skills/pentest-tools/src-hunter/references/playbooks/api-rest.md:jwt:964
+skills/pentest-tools/src-hunter/references/playbooks/llm-prompt-injection.md:jwt:1035
+skills/pentest-tools/src-hunter/references/playbooks/oauth-saml-jwt.md:jwt:1617
+skills/pentest-tools/src-hunter/references/playbooks/oauth-saml-jwt.md:jwt:244
+skills/pentest-tools/src-hunter/references/playbooks/rce.md:curl-auth-user:1776
+skills/pentest-tools/src-hunter/references/playbooks/ssrf-cache-host.md:curl-auth-user:1856
+skills/workers-best-practices/references/rules.md:generic-api-key:82

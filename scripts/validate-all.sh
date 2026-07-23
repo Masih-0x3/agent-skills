@@ -69,7 +69,16 @@ PY
 echo "OK project-task-decomposer"
 
 echo "== catalog =="
-$PY -c "import json; d=json.load(open('$ROOT/catalog/skills.json')); assert len(d['skills'])>=2; print('skills', [s['id'] for s in d['skills']])"
+$PY "$ROOT/scripts/build_catalog.py"
+$PY - <<PY
+import json
+from pathlib import Path
+root = Path(r"$ROOT")
+catalog = json.loads((root / "catalog/skills.json").read_text())
+actual = len(list((root / "skills").glob("*/SKILL.md")))
+assert catalog["skill_count"] == actual == len(catalog["skills"]), catalog
+print("OK catalog", actual, "skills")
+PY
 
 if [[ $fail -ne 0 ]]; then
   echo "FAILED"

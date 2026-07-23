@@ -10,7 +10,7 @@ This monorepo stores **portable agent skills**. Prefer editing skill packages un
 2. Do not collapse two skills into one package.
 3. When changing a skill schema, update examples and validators in the same change.
 4. Prefer stdlib Python for validation scripts.
-5. Keep README skill table and `catalog/skills.json` in sync.
+5. Run `python3 scripts/build_catalog.py` after adding, removing, or renaming a skill so `catalog/skills.json` stays in sync.
 6. Run `./scripts/validate-all.sh` before claiming a skill is ready.
 
 ## Skill contract

@@ -6,12 +6,9 @@ This repository is a **skill monorepo**: each skill is a self-contained package 
 
 ## Skills
 
-| Skill | Version | Purpose |
-|-------|---------|---------|
-| [`software-orchestrator`](skills/software-orchestrator/) | 0.3.0 | Goal-mode multi-agent software orchestration: plan → route → dispatch → validate → review → integrate → learn. Model-agnostic routing with host capability priors. |
-| [`project-task-decomposer`](skills/project-task-decomposer/) | 1.1.0 | Turn a PRD / handoff / plan into a versioned, sharded, dependency-aware **task corpus** for the Software Orchestrator. Does not implement code or assign models. |
+This private repository is the portable source of truth for 152 skills: the owner's personal skills, approved third-party snapshots, and the two original orchestration packages. The complete machine-readable inventory is [`catalog/skills.json`](catalog/skills.json).
 
-Machine-readable catalog: [`catalog/skills.json`](catalog/skills.json)
+It deliberately excludes Codex's bundled `.system` skills and plugin-cache skills. Install or update those through Codex on each machine; copying them here would make the repository stale and platform-dependent.
 
 ## Recommended pipeline
 
@@ -30,7 +27,27 @@ PRD / handoff / plan
 
 ## Install
 
-### One skill (global)
+### Sync the full library (recommended)
+
+Clone this private repository on a machine, then run the native sync command. It copies every package to both global discovery roots and does not remove unrelated local skills.
+
+```powershell
+git clone https://github.com/Masih-0x3/agent-skills.git $HOME\agent-skills
+cd $HOME\agent-skills
+.\scripts\sync-skills.ps1
+```
+
+On macOS or Linux:
+
+```bash
+git clone https://github.com/Masih-0x3/agent-skills.git ~/agent-skills
+cd ~/agent-skills
+./scripts/sync-skills.sh
+```
+
+Use `--target agents` / `--target codex` in Bash or `-Target Agents` / `-Target Codex` in PowerShell to install to only one location. Restart Codex or open a new session afterwards.
+
+### One skill (legacy helper)
 
 ```bash
 # Grok Build
@@ -102,6 +119,12 @@ agent-skills/
 
 ```bash
 ./scripts/validate-all.sh
+```
+
+When adding, removing, or renaming a skill, regenerate the inventory:
+
+```bash
+python3 scripts/build_catalog.py
 ```
 
 ## Design principles

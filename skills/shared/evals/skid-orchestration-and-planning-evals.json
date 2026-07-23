@@ -1,0 +1,57 @@
+{
+  "suite": "skid-orchestration-and-planning",
+  "evals": [
+    {
+      "id": "planning-silent-zero-workers",
+      "prompt": "Use planning-orchestrator for a broad redesign plan, but do whatever is best.",
+      "expected_output": "Should include an orchestration decision receipt. If zero workers are used, it must explain why and include a reconsider trigger; broad redesigns should normally use at least one worker unless parent-only is concretely justified.",
+      "assertions": [
+        "Includes orchestration decision receipt",
+        "Explains worker count",
+        "No silent zero-worker mode",
+        "Includes reconsider trigger",
+        "Does not create visible thread unless justified"
+      ],
+      "files": []
+    },
+    {
+      "id": "visible-thread-not-scratch-space",
+      "prompt": "Can you split this into subthreads so we get more room?",
+      "expected_output": "Should distinguish workers/subagents from user-visible Codex threads, avoid visible thread creation as a hidden context workaround, and propose workers only if there are independent scopes.",
+      "assertions": [
+        "Distinguishes workers from visible threads",
+        "Rejects thread creation as generic scratch space",
+        "Uses independent-scope criterion",
+        "Keeps parent accountability"
+      ],
+      "files": []
+    },
+    {
+      "id": "native-superiority-planning",
+      "prompt": "Use planning-orchestrator and make the plan better than Codex Native planning.",
+      "expected_output": "Should include a native planning superiority section, compare against native baseline risks, assign a superiority score target, and include evidence, validation, worker/thread decision, and implementation handoff.",
+      "assertions": [
+        "Includes native planning superiority section",
+        "Compares against Codex Native baseline",
+        "Uses superiority scorecard",
+        "Includes worker/thread decision",
+        "Includes direct implementation handoff"
+      ],
+      "files": []
+    },
+    {
+      "id": "implementation-validation-worker",
+      "prompt": "Use implementation-orchestrator to implement a multi-surface plan touching UI and data.",
+      "expected_output": "Should choose lightweight or full worker mode unless clearly justified otherwise, include a read-only validation worker or explain why not, avoid overlapping write scopes, and close with worker results and parent verification.",
+      "assertions": [
+        "Includes worker-mode decision before edits",
+        "Uses or justifies not using validation worker",
+        "Avoids overlapping write scopes",
+        "Includes worker closeout",
+        "Separates local/live/deploy validation"
+      ],
+      "files": []
+    }
+  ]
+}
+

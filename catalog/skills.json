@@ -1,33 +1,1071 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "description": "Portable snapshot of the owner's personal and approved third-party skills.",
+  "skill_count": 152,
   "skills": [
     {
+      "id": "ab-testing",
+      "name": "ab-testing",
+      "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" \"hypothesis,\" \"should I test this,\" \"which version is better,\" \"test two versions,\" \"statistical significance,\" \"how long should I run this test,\" \"growth experiments,\" \"experiment velocity,\" \"experiment backlog,\" \"ICE score,\" \"experimentation program,\" or \"experiment playbook.\" Use this whenever someone is comparing two approaches and wants to measure which performs better, or when they want to build a systematic experimentation practice. For tracking implementation, see analytics. For page-level conversion optimization, see cro.",
+      "path": "skills/ab-testing",
+      "file_count": 4
+    },
+    {
+      "id": "ad-creative",
+      "name": "ad-creative",
+      "description": "When the user wants to generate, iterate, or scale ad creative \u2014 headlines, descriptions, primary text, or full ad variations \u2014 for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see ads. For landing page copy, see copywriting.",
+      "path": "skills/ad-creative",
+      "file_count": 4
+    },
+    {
+      "id": "ads",
+      "name": "ads",
+      "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see cro.",
+      "path": "skills/ads",
+      "file_count": 6
+    },
+    {
+      "id": "agent-reach",
+      "name": "agent-reach",
+      "description": ">",
+      "path": "skills/agent-reach",
+      "file_count": 7
+    },
+    {
+      "id": "agents-sdk",
+      "name": "agents-sdk",
+      "description": "Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, chat applications, voice agents, or browser automation. Covers Agent class, state management, callable RPC, Workflows, durable execution, queues, retries, observability, and React hooks. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+      "path": "skills/agents-sdk",
+      "file_count": 20
+    },
+    {
+      "id": "ai-seo",
+      "name": "ai-seo",
+      "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' or 'optimize for Claude/Gemini.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema.",
+      "path": "skills/ai-seo",
+      "file_count": 4
+    },
+    {
+      "id": "analytics",
+      "name": "analytics",
+      "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"conversion tracking,\" \"event tracking,\" \"UTM parameters,\" \"tag manager,\" \"GTM,\" \"analytics implementation,\" \"tracking plan,\" \"how do I measure this,\" \"track conversions,\" \"attribution,\" \"Mixpanel,\" \"Segment,\" \"are my events firing,\" or \"analytics isn't working.\" Use this whenever someone asks how to know if something is working or wants to measure marketing results. For A/B test measurement, see ab-testing.",
+      "path": "skills/analytics",
+      "file_count": 5
+    },
+    {
+      "id": "animation-vocabulary",
+      "name": "animation-vocabulary",
+      "description": "Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term (\"the bouncy thing when a popover opens\" \u2192 Pop in; \"the iOS rubber-band scroll\" \u2192 Rubber-banding). Use when the user asks \"what's it called when\u2026\", or describes a motion effect without knowing its name and wants the right word to prompt an AI or designer with. For naming an effect, not designing or building one.",
+      "path": "skills/animation-vocabulary",
+      "file_count": 1
+    },
+    {
+      "id": "apk-reverse",
+      "name": "apk-reverse",
+      "description": "\u5728 CLI \u73af\u5883\u4e0b\u505a Android APK \u9006\u5411\u65f6\u4f7f\u7528\u3002\u9002\u7528\u4e8e APK \u89e3\u5305\u3001Java \u53cd\u7f16\u8bd1\u3001smali \u4fee\u6539\u3001\u91cd\u6253\u5305\u3001Frida \u52a8\u6001 Hook\uff0c\u4ee5\u53ca\u6309\u9700\u5207\u6362\u5230 so/native \u5206\u6790\u3002\u4f18\u5148\u4f7f\u7528\u672c\u673a\u5df2\u5b89\u88c5\u7684 jadx\u3001apktool\u3001frida\u3001adb\u3001ida-reverse\u3001radare2\u3002",
+      "path": "skills/apk-reverse",
+      "file_count": 13
+    },
+    {
+      "id": "apple-design",
+      "name": "apple-design",
+      "description": "Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces.",
+      "path": "skills/apple-design",
+      "file_count": 1
+    },
+    {
+      "id": "aso",
+      "name": "aso",
+      "description": "When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren't people downloading my app,' 'improve my app conversion,' 'keyword optimization for app,' or 'compare my app to competitors.' Use when the user shares an App Store or Google Play URL and wants to improve it.",
+      "path": "skills/aso",
+      "file_count": 7
+    },
+    {
+      "id": "ast-grep",
+      "name": "ast-grep",
+      "description": "Use for AST-aware code search, syntax-shaped matching, codemods, API migrations, repeated structured edits, or refactors where text grep may overmatch or miss language structure.",
+      "path": "skills/ast-grep",
+      "file_count": 1
+    },
+    {
+      "id": "audit-orchestrator",
+      "name": "audit-orchestrator",
+      "description": "Orchestrate a scoped, goal-backed multi-agent audit loop from one parent thread only when the audit is large or complex enough to benefit from delegation. Use when the user asks for an audit conductor/orchestrator, scoped audit plan, UI/UX/backend/security/performance/product audit with subagents, or wants an audit plan turned into /goal and iterated until done criteria are satisfied. Do not use for small one-file reviews, narrow bug checks, or implementation-first work; use a direct audit/review instead.",
+      "path": "skills/audit-orchestrator",
+      "file_count": 2
+    },
+    {
+      "id": "background-browser-operator",
+      "name": "background-browser-operator",
+      "description": "Work with browser surfaces in a controlled background lane while the user studies, meets, reviews, or does another primary task. Use Obscura MCP as the default browser labor surface for DOM/text workflows, and escalate to Chrome, in-app browser, or computer-use for visual, authenticated, profile-specific, extension, or browser-parity proof. Use when the user asks to keep browser work running in the background, monitor or verify a web flow without interrupting them, open a target before manual handoff, or pair browser verification with planning, audit, implementation, production-readiness, Safari extension, or frontend-design work.",
+      "path": "skills/background-browser-operator",
+      "file_count": 5
+    },
+    {
+      "id": "better-colors",
+      "name": "better-colors",
+      "description": "OKLCH color space for web projects. Convert hex/rgb/hsl to oklch, generate palettes, check contrast, handle gamut boundaries, and theme with Tailwind v4. Triggers on oklch, color conversion, palette generation, contrast ratio, gamut, display p3, design tokens, hue drift, chroma, dark mode colors.",
+      "path": "skills/better-colors",
+      "file_count": 5
+    },
+    {
+      "id": "better-typography",
+      "name": "better-typography",
+      "description": "Web typography from choosing fonts to spacing, wrapping and accessibility. Use when picking or pairing typefaces, configuring variable fonts or OpenType features, setting up a type scale, checking heading hierarchy, styling text in components, truncating text, styling underlines, selection, placeholders or carets, or reviewing frontend code for typography. Triggers on typography, fonts, font formats, woff2, variable fonts, font-weight, opentype, font-feature-settings, letter-spacing, line-height, type scale, heading hierarchy, heading levels, tabular numbers, text-wrap, truncation, line clamp, underlines, text-decoration, text selection, iOS input zoom, font smoothing, text contrast, measure, line length, text-box, smart punctuation, drop cap.",
+      "path": "skills/better-typography",
+      "file_count": 7
+    },
+    {
+      "id": "better-ui",
+      "name": "better-ui",
+      "description": "Design engineering principles for making interfaces feel polished. Use when building UI components, reviewing frontend code, implementing animations, hover states, shadows, borders, micro-interactions, enter/exit animations, or any visual detail work. Triggers on UI polish, design details, \"make it feel better\", \"feels off\", stagger animations, border radius, optical alignment, image outlines, box shadows.",
+      "path": "skills/better-ui",
+      "file_count": 4
+    },
+    {
+      "id": "binary-diff",
+      "name": "binary-diff",
+      "description": "|",
+      "path": "skills/binary-diff",
+      "file_count": 2
+    },
+    {
+      "id": "brandkit",
+      "name": "brandkit",
+      "description": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts.",
+      "path": "skills/brandkit",
+      "file_count": 1
+    },
+    {
+      "id": "checkpoint-quality-loop",
+      "name": "checkpoint-quality-loop",
+      "description": "Use when the user wants a serious checkpoint before continuing work, especially after meaningful implementation, refactor, audit remediation, launch-readiness, or multi-agent work where correctness, production quality, maintainability, or a scoped lens like UI/UX, security, backend, data, performance, architecture, or release readiness must be verified.",
+      "path": "skills/checkpoint-quality-loop",
+      "file_count": 8
+    },
+    {
+      "id": "chronicle",
+      "name": "chronicle",
+      "description": "|",
+      "path": "skills/chronicle",
+      "file_count": 1
+    },
+    {
+      "id": "churn-prevention",
+      "name": "churn-prevention",
+      "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit survey,' 'pause subscription,' 'involuntary churn,' 'people keep canceling,' 'churn rate is too high,' 'how do I keep users,' or 'customers are leaving.' Use this whenever someone is losing subscribers or wants to build systems to prevent it. For post-cancel win-back email sequences, see emails. For in-app upgrade paywalls, see paywalls.",
+      "path": "skills/churn-prevention",
+      "file_count": 4
+    },
+    {
+      "id": "cline-orchestrator",
+      "name": "cline-orchestrator",
+      "description": "Delegate supervised UI/UX design, visual implementation, design audits, image-to-code, plan critiques, or other benchmark-approved slices from Codex to Cline/ClinePass/GLM through the terminal. Use when Codex should own and steward Cline as a child specialist: keep Cline current, inspect Cline skills, select Cline only when current benchmark evidence says it helps, run GLM 5.2 with xhigh reasoning, capture provenance, recover interrupted Cline work through Codex, incorporate only reviewed output, and verify the final project behavior.",
+      "path": "skills/cline-orchestrator",
+      "file_count": 12
+    },
+    {
+      "id": "cloudflare",
+      "name": "cloudflare",
+      "description": "Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), feature flags (Flagship), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+      "path": "skills/cloudflare",
+      "file_count": 321
+    },
+    {
+      "id": "cloudflare-email-service",
+      "name": "cloudflare-email-service",
+      "description": "Send and receive transactional emails with Cloudflare Email Service (Email Sending + Email Routing). Use when building email sending (Workers binding or REST API), email routing, Agents SDK email handling, or integrating email into any app \u2014 Workers, Node.js, Python, Go, etc. Also use for email deliverability, SPF/DKIM/DMARC, wrangler email setup, MCP email tools, or when a coding agent needs to send emails. Even for simple requests like \"add email to my Worker\" \u2014 this skill has critical config details.",
+      "path": "skills/cloudflare-email-service",
+      "file_count": 6
+    },
+    {
+      "id": "co-marketing",
+      "name": "co-marketing",
+      "description": "When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use when the user says 'co-marketing,' 'partner marketing,' 'joint campaign,' 'who should we partner with,' 'integration marketing,' 'cross-promotion,' 'collaborate with another company,' 'partnership ideas,' or 'co-brand.' For customer referral programs, see referrals. For launch-specific partnerships, see launch.",
+      "path": "skills/co-marketing",
+      "file_count": 2
+    },
+    {
+      "id": "codebase-design",
+      "name": "codebase-design",
+      "description": "Use when designing or refactoring code interfaces, reviewing architecture, making behavior easier to test, reducing duplicated business logic, or deciding whether a new abstraction is justified. In local Codex work, prefer existing repo patterns and CodeGraph/source evidence before proposing structural change.",
+      "path": "skills/codebase-design",
+      "file_count": 3
+    },
+    {
+      "id": "codex-chatgpt-control",
+      "name": "codex-chatgpt-control",
+      "description": "Use when Codex agents need to operate visible ChatGPT web sessions through the codex-chatgpt-control SDK, including prompts, threads, files, downloads, reports, browser bridge blockers, and local source smokes.",
+      "path": "skills/codex-chatgpt-control",
+      "file_count": 1
+    },
+    {
+      "id": "codex-conductor",
+      "name": "codex-conductor",
+      "description": "Manual opt-in Codex conductor for Fugu-style model routing and worker review.",
+      "path": "skills/codex-conductor",
+      "file_count": 1
+    },
+    {
+      "id": "coding-agent-sessions",
+      "name": "coding-agent-sessions",
+      "description": "Use when asked to inspect, reconstruct, audit, compare, or summarize prior coding-agent work across Codex, Claude, OpenCode, or local session logs, including token usage, subagents, tool calls, archived rollouts, disconnected work, or questions about what happened since a specified time.",
+      "path": "skills/coding-agent-sessions",
+      "file_count": 1
+    },
+    {
+      "id": "cold-email",
+      "name": "cold-email",
+      "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \"cold outreach,\" \"prospecting email,\" \"outbound email,\" \"email to leads,\" \"reach out to prospects,\" \"sales email,\" \"follow-up email sequence,\" \"nobody's replying to my emails,\" or \"how do I write a cold email.\" Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see emails. For sales collateral beyond emails, see sales-enablement.",
+      "path": "skills/cold-email",
+      "file_count": 7
+    },
+    {
+      "id": "community-marketing",
+      "name": "community-marketing",
+      "description": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, engage users post-signup, or turn customers into evangelists. Trigger phrases: \\\"build a community,\\\" \\\"community strategy,\\\" \\\"Discord community,\\\" \\\"Slack community,\\\" \\\"community-led growth,\\\" \\\"brand advocates,\\\" \\\"user community,\\\" \\\"forum strategy,\\\" \\\"community engagement,\\\" \\\"grow our community,\\\" \\\"ambassador program,\\\" \\\"community flywheel.\\\"",
+      "path": "skills/community-marketing",
+      "file_count": 2
+    },
+    {
+      "id": "compact-landing",
+      "name": "compact-landing",
+      "description": ">-",
+      "path": "skills/compact-landing",
+      "file_count": 3
+    },
+    {
+      "id": "competitor-profiling",
+      "name": "competitor-profiling",
+      "description": "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence,' 'competitor deep dive,' 'who are my competitors,' 'competitor landscape,' 'competitor dossier,' 'competitive audit,' or 'research these competitors.' Input is a list of competitor URLs. Output is structured competitor profile markdown files. For creating comparison/alternative pages from profiles, see competitors. For sales-specific battle cards, see sales-enablement.",
+      "path": "skills/competitor-profiling",
+      "file_count": 4
+    },
+    {
+      "id": "competitors",
+      "name": "competitors",
+      "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we compare to X,' 'battle card,' or 'competitor teardown.' Use this for any content that positions your product against competitors. Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. For sales-specific competitor docs, see sales-enablement.",
+      "path": "skills/competitors",
+      "file_count": 4
+    },
+    {
+      "id": "composio-cli",
+      "name": "composio-cli",
+      "description": "Help users operate the published Composio CLI to find the right tool, connect accounts, inspect schemas, execute tools, subscribe to trigger events with `composio listen`, script workflows with `composio run`, and call authenticated app APIs with `composio proxy`. Use when the user asks how to do something with `composio`, wants to run a known tool slug, needs to discover a slug with `composio search`, fix a missing connection with `composio link`, inspect tool inputs with `--get-schema` or `--dry-run`, troubleshoot top-level CLI flows, or explicitly needs `composio dev` guidance.",
+      "path": "skills/composio-cli",
+      "file_count": 5
+    },
+    {
+      "id": "computer-use",
+      "name": "computer-use",
+      "description": ">-",
+      "path": "skills/computer-use",
+      "file_count": 1
+    },
+    {
+      "id": "content-strategy",
+      "name": "content-strategy",
+      "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content marketing,\" \"content roadmap,\" \"what content should I create,\" \"blog topics,\" \"content pillars,\" or \"I don't know what to write.\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social.",
+      "path": "skills/content-strategy",
+      "file_count": 3
+    },
+    {
+      "id": "context7-mcp",
+      "name": "context7-mcp",
+      "description": "Use when the task depends on current documentation for a library, framework, SDK, API, CLI tool, cloud service, setup/configuration, version migration, or platform-specific behavior. Prefer Context7 when available; fall back to official docs or source repos when Context7 is unavailable or weak.",
+      "path": "skills/context7-mcp",
+      "file_count": 1
+    },
+    {
+      "id": "copy-editing",
+      "name": "copy-editing",
+      "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. For writing new copy, see copywriting.",
+      "path": "skills/copy-editing",
+      "file_count": 5
+    },
+    {
+      "id": "copywriting",
+      "name": "copywriting",
+      "description": "When the user wants to write, rewrite, or improve marketing copy for any page \u2014 including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"CTA copy,\" \"value proposition,\" \"tagline,\" \"subheadline,\" \"hero section copy,\" \"above the fold,\" \"this copy is weak,\" \"make this more compelling,\" or \"help me describe my product.\" Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see emails. For popup copy, see popups. For editing existing copy, see copy-editing.",
+      "path": "skills/copywriting",
+      "file_count": 4
+    },
+    {
+      "id": "create-hook",
+      "name": "create-hook",
+      "description": "Codex hook authoring. Use when the user asks to create, update, audit, or verify Codex lifecycle hooks in global ~/.codex or project .codex scope, including hook scripts, hooks.json, matcher behavior, trust review, and smoke verification.",
+      "path": "skills/create-hook",
+      "file_count": 4
+    },
+    {
+      "id": "cro",
+      "name": "cro",
+      "description": "When the user wants to optimize, improve, or increase conversions on any marketing page or form \u2014 including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms. Also use when the user says 'CRO,' 'conversion rate optimization,' 'this page isn't converting,' 'improve conversions,' 'why isn't this page working,' 'my landing page sucks,' 'form abandonment,' 'nobody's converting,' 'low conversion rate,' or 'this page needs work.' Use this even if the user just shares a URL and asks for feedback. For signup/registration flows, see signup. For post-signup activation, see onboarding. For popups/modals, see popups.",
+      "path": "skills/cro",
+      "file_count": 4
+    },
+    {
+      "id": "customer-research",
+      "name": "customer-research",
+      "description": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \"customer research,\" \"ICP research,\" \"talk to customers,\" \"analyze transcripts,\" \"customer interviews,\" \"survey analysis,\" \"support ticket analysis,\" \"voice of customer,\" \"VOC,\" \"build personas,\" \"customer personas,\" \"jobs to be done,\" \"JTBD,\" \"what do customers say,\" \"what are customers struggling with,\" \"Reddit mining,\" \"G2 reviews,\" \"review mining,\" \"digital watering holes,\" \"community research,\" \"forum research,\" \"competitor reviews,\" \"customer sentiment,\" or \"find out why customers churn/convert/buy.\" Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see cro.",
+      "path": "skills/customer-research",
+      "file_count": 3
+    },
+    {
+      "id": "design-taste-frontend",
+      "name": "design-taste-frontend",
+      "description": "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.",
+      "path": "skills/design-taste-frontend",
+      "file_count": 1
+    },
+    {
+      "id": "design-taste-frontend-v1",
+      "name": "design-taste-frontend-v1",
+      "description": "The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default is `design-taste-frontend` (v2 experimental), which is a substantial rewrite. Use this v1 install name only if you need exact backward compatibility.",
+      "path": "skills/design-taste-frontend-v1",
+      "file_count": 1
+    },
+    {
+      "id": "diagram-generator",
+      "name": "diagram-generator",
+      "description": "generate, refine, validate, and render diagrams from natural language, notes, code snippets, schemas, tables, or existing diagram source. use for flowcharts, swimlanes, sequence diagrams, state diagrams, er diagrams, class diagrams, architecture/c4-style diagrams, dependency graphs, gantt charts, mind maps, user journeys, sankey-style flows, org charts, network graphs, and other visual models. supports mermaid by default, graphviz dot for complex graph layout, plantuml for uml-heavy engineering diagrams, and svg output when direct markup is more reliable.",
+      "path": "skills/diagram-generator",
+      "file_count": 6
+    },
+    {
+      "id": "diffui",
+      "name": "diffui-designer",
+      "description": ">-",
+      "path": "skills/diffui",
+      "file_count": 2
+    },
+    {
+      "id": "directory-submissions",
+      "name": "directory-submissions",
+      "description": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions \"directory submissions,\" \"submit to directories,\" \"backlinks from directories,\" \"list my product,\" \"submit to Product Hunt,\" \"BetaList,\" \"TAAFT,\" \"Futurepedia,\" \"G2 listing,\" \"Capterra listing,\" \"AlternativeTo,\" \"SaaSHub,\" \"AI directories,\" \"MCP registry,\" \"agent directory,\" \"dofollow backlinks,\" \"launch directories,\" or \"directory tracker.\" Use this whenever someone is planning the directory layer of a product launch or an ongoing backlink campaign. For the broader launch moment, see launch. For programmatic SEO pages that should live behind these backlinks, see programmatic-seo. For AI citation optimization, see ai-seo.",
+      "path": "skills/directory-submissions",
+      "file_count": 5
+    },
+    {
+      "id": "domain-modeling",
+      "name": "domain-modeling",
+      "description": "Use when project terminology, product workflow, data contracts, or architectural decisions are causing ambiguity, or when a feature/RCA/refactor needs a shared domain vocabulary. In local Codex work, read existing repo docs first and write durable docs only when the repo convention or user request justifies it.",
+      "path": "skills/domain-modeling",
+      "file_count": 3
+    },
+    {
+      "id": "durable-objects",
+      "name": "durable-objects",
+      "description": "Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO code for best practices. Covers Workers integration, wrangler config, and testing with Vitest. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+      "path": "skills/durable-objects",
+      "file_count": 4
+    },
+    {
+      "id": "edr-bypass-re",
+      "name": "edr-bypass-re",
+      "description": "|",
+      "path": "skills/edr-bypass-re",
+      "file_count": 4
+    },
+    {
+      "id": "emails",
+      "name": "emails",
+      "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\" \"onboarding emails,\" \"welcome sequence,\" \"re-engagement emails,\" \"email automation,\" \"lifecycle emails,\" \"trigger-based emails,\" \"email funnel,\" \"email workflow,\" \"what emails should I send,\" \"welcome series,\" or \"email cadence.\" Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding.",
+      "path": "skills/emails",
+      "file_count": 5
+    },
+    {
+      "id": "emil-design-eng",
+      "name": "emil-design-eng",
+      "description": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+      "path": "skills/emil-design-eng",
+      "file_count": 1
+    },
+    {
+      "id": "engineering-acceptance-review",
+      "name": "engineering-acceptance-review",
+      "description": "Use when the user wants completed Codex or agent work checked before accepting it: project-goal fit, task fit, hallucinated code, spaghetti, architecture drift, tests, browser behavior, security/data risk, evidence, and final accept/fix/block verdict. Use after meaningful generated code, repo edits, UI changes, refactors, bug fixes, audit remediation, or implementation plans.",
+      "path": "skills/engineering-acceptance-review",
+      "file_count": 3
+    },
+    {
+      "id": "extract-design-system",
+      "name": "extract-design-system",
+      "description": "Extract design primitives from a public website and generate starter token files for your project.",
+      "path": "skills/extract-design-system",
+      "file_count": 3
+    },
+    {
+      "id": "find-skills",
+      "name": "find-skills",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "path": "skills/find-skills",
+      "file_count": 1
+    },
+    {
+      "id": "firmware-pentest",
+      "name": "firmware-pentest",
+      "description": "|",
+      "path": "skills/firmware-pentest",
+      "file_count": 4
+    },
+    {
+      "id": "framer",
+      "name": "framer",
+      "description": ">",
+      "path": "skills/framer",
+      "file_count": 5
+    },
+    {
+      "id": "framer-code-components",
+      "name": "framer-code-components",
+      "description": "Framer code component implementation guidance, platform constraints, layout annotations, property controls, and authoring best practices. Use only after loading the framer skill and reading the Components row of the generated projects/safeProjectId/index.md task map first in the same task; never load this skill directly as the entry point.",
+      "path": "skills/framer-code-components",
+      "file_count": 1
+    },
+    {
+      "id": "free-tools",
+      "name": "free-tools",
+      "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes \u2014 lead generation, SEO value, or brand awareness. Also use when the user mentions \"engineering as marketing,\" \"free tool,\" \"marketing tool,\" \"calculator,\" \"generator,\" \"interactive tool,\" \"lead gen tool,\" \"build a tool for leads,\" \"free resource,\" \"ROI calculator,\" \"grader tool,\" \"audit tool,\" \"should I build a free tool,\" or \"tools for lead gen.\" Use this whenever someone wants to build something useful and give it away to attract leads or earn links. For downloadable content lead magnets (ebooks, checklists, templates), see lead-magnets.",
+      "path": "skills/free-tools",
+      "file_count": 3
+    },
+    {
+      "id": "frontend-design",
+      "name": "frontend-design",
+      "description": "Create or improve production-quality frontend UI/UX in code, including React, Next.js, Tailwind CSS, shadcn/Radix, responsive layouts, design systems, accessibility, motion, landing pages, dashboards, visual redesigns, and frontend QA. Use when the user asks for UI, UX, frontend design, visual polish, web or app screens, components, responsive or mobile fixes, landing pages, design-to-code work, or screenshot-backed frontend verification. When Magic UI components, animations, backgrounds, or marketing UI could help, use the globally configured Magic UI MCP.",
+      "path": "skills/frontend-design",
+      "file_count": 2
+    },
+    {
+      "id": "full-output-enforcement",
+      "name": "full-output-enforcement",
+      "description": "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.",
+      "path": "skills/full-output-enforcement",
+      "file_count": 1
+    },
+    {
+      "id": "gitea-github-cicd",
+      "name": "gitea-github-cicd",
+      "description": "Validate repository changes through a server-hosted Gitea Actions route and then push the identical verified commit to GitHub. Use when a user asks to set up, repair, run, migrate, or operate CI/CD with Gitea on codex-linode, Gitea Actions, Gitea Runner, GitHub remotes, or a Gitea-before-GitHub quality gate.",
+      "path": "skills/gitea-github-cicd",
+      "file_count": 4
+    },
+    {
+      "id": "goal",
+      "name": "goal",
+      "description": "Use when the user invokes /goal, asks for Codex goal mode, or starts long-horizon autonomous work that should be refined into a concrete, verifiable goal contract before execution. Use for durable coding, debugging, research, migration, browser-testing, deployment-check, or data-review tasks where Codex should keep working until evidence proves completion or a real blocker remains.",
+      "path": "skills/goal",
+      "file_count": 2
+    },
+    {
+      "id": "gpt-taste",
+      "name": "gpt-taste",
+      "description": "Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento grids, strict GSAP ScrollTriggers (pinning, stacking, scrubbing), inline micro-images, and massive section spacing.",
+      "path": "skills/gpt-taste",
+      "file_count": 1
+    },
+    {
+      "id": "high-end-visual-design",
+      "name": "high-end-visual-design",
+      "description": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic.",
+      "path": "skills/high-end-visual-design",
+      "file_count": 1
+    },
+    {
+      "id": "hindsight-docs",
+      "name": "hindsight-docs",
+      "description": "Complete Hindsight documentation for AI agents. Use this to learn about Hindsight architecture, APIs, configuration, and best practices.",
+      "path": "skills/hindsight-docs",
+      "file_count": 86
+    },
+    {
+      "id": "ida-reverse",
+      "name": "ida-reverse",
+      "description": "|",
+      "path": "skills/ida-reverse",
+      "file_count": 4
+    },
+    {
+      "id": "image",
+      "name": "image",
+      "description": "When the user wants to create, generate, edit, or optimize images for marketing \u2014 blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Midjourney,' 'DALL-E,' 'GPT Image,' 'Ideogram,' 'Gemini image,' 'Canva,' 'Figma,' 'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for general-purpose marketing image creation and optimization. For paid ad image creative and platform-specific ad specs, see ad-creative. For video production, see video.",
+      "path": "skills/image",
+      "file_count": 3
+    },
+    {
+      "id": "image-to-code",
+      "name": "image-to-code",
+      "description": "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny compressed boards, generate fresh standalone images for sections or detail views instead of cropping old ones, avoid lazy under-generation, avoid cards-inside-cards-inside-cards UI, and keep the hero clean, spacious, readable, and visible on a small laptop.",
+      "path": "skills/image-to-code",
+      "file_count": 1
+    },
+    {
+      "id": "imagegen-frontend-mobile",
+      "name": "imagegen-frontend-mobile",
+      "description": "Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comfortably readable text, strong multi-screen consistency, controlled color palettes, non-generic creative direction, textured surfaces, image-led composition, tasteful custom iconography, and clean phone mockup framing. By default, screens should be shown inside a subtle premium iPhone or similar phone mockup with a visible frame, while the main focus stays on the app content itself. This skill generates images only. It does not write code.",
+      "path": "skills/imagegen-frontend-mobile",
+      "file_count": 1
+    },
+    {
+      "id": "imagegen-frontend-web",
+      "name": "imagegen-frontend-web",
+      "description": "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE \u2014 generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Never compress multiple sections into one image. Enforces composition variety (not always left-text / right-image), background-image freedom, varied CTAs, varied hero scales (giant / mid / mini minimalist), narrative concept spine, second-read moments, and a single consistent palette across all images. Optimized for landing pages, marketing sites, and product comps that developers or coding models can accurately recreate.",
+      "path": "skills/imagegen-frontend-web",
+      "file_count": 1
+    },
+    {
+      "id": "implementation-orchestrator",
+      "name": "implementation-orchestrator",
+      "description": "Orchestrate goal-backed implementation for large plans, audit remediation, RCA fix plans, multi-phase features, UI/UX revamps, backend/data/security work, or cross-surface engineering changes. Use when the user asks for an implementation conductor/orchestrator, says to implement a saved planning-orchestrator file, audit report, or root-cause fix plan, or wants focused subagents/workers coordinated until acceptance criteria pass. Do not use for small one-file fixes, read-only audits, planning-only work, or unresolved failures that still need root cause analysis first.",
+      "path": "skills/implementation-orchestrator",
+      "file_count": 2
+    },
+    {
+      "id": "improve-animations",
+      "name": "improve-animations",
+      "description": "Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other agents (or cheaper models) to execute. Read-only on source code \u2014 it plans improvements, it does not apply them. Use when the user asks to \"improve the animations\", \"audit the motion\", \"make this app feel better\", or wants a roadmap of animation fixes rather than a review of a single diff.",
+      "path": "skills/improve-animations",
+      "file_count": 3
+    },
+    {
+      "id": "industrial-brutalist-ui",
+      "name": "industrial-brutalist-ui",
+      "description": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.",
+      "path": "skills/industrial-brutalist-ui",
+      "file_count": 1
+    },
+    {
+      "id": "launch",
+      "name": "launch",
+      "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas.",
+      "path": "skills/launch",
+      "file_count": 2
+    },
+    {
+      "id": "lead-magnets",
+      "name": "lead-magnets",
+      "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,\" \"PDF download,\" \"resource library,\" \"content offer,\" \"email capture content,\" \"Notion template,\" \"spreadsheet template,\" or \"what should I give away for emails.\" Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tools. For writing the actual content, see copywriting. For the email sequence after capture, see emails.",
+      "path": "skills/lead-magnets",
+      "file_count": 4
+    },
+    {
+      "id": "liquid-glass",
+      "name": "liquid-glass",
+      "description": "Design and implement high-quality liquid glass UI effects for web apps. Use when the user asks for liquid glass, Aave-style SVG displacement glass, LiquidGlass/WebGL glass, glass refraction, glassmorphism with realistic distortion, Safari-compatible glass, React/Next/Tailwind glass components, or a decision between CSS/SVG/WebGL glass approaches.",
+      "path": "skills/liquid-glass",
+      "file_count": 6
+    },
+    {
+      "id": "lsp-setup",
+      "name": "lsp-setup",
+      "description": "Use when a coding task needs language-server diagnostics, goto/reference/rename support, project-aware static analysis, or post-edit diagnostics beyond ordinary tests, especially in typed or multi-file repositories.",
+      "path": "skills/lsp-setup",
+      "file_count": 1
+    },
+    {
+      "id": "mac-storage-cleanup",
+      "name": "mac-storage-cleanup",
+      "description": "Find wasted disk space on macOS and propose cleanup candidates. Use when the user asks Codex to scan a Mac/MacBook for useless files, wasted storage, large caches, logs, downloads, build artifacts, Xcode simulator data, Docker/container leftovers, package-manager caches, node_modules, duplicate archives, old installers, or to free disk space. Always run read-only analysis first and ask explicit permission before deleting or moving anything.",
+      "path": "skills/mac-storage-cleanup",
+      "file_count": 4
+    },
+    {
+      "id": "make-interfaces-feel-better",
+      "name": "make-interfaces-feel-better",
+      "description": "Design engineering principles for making interfaces feel polished. Use when building UI components, reviewing frontend code, implementing animations, hover states, shadows, borders, typography, micro-interactions, enter/exit animations, or any visual detail work. Triggers on UI polish, design details, \"make it feel better\", \"feels off\", stagger animations, border radius, optical alignment, font smoothing, tabular numbers, image outlines, box shadows.",
+      "path": "skills/make-interfaces-feel-better",
+      "file_count": 5
+    },
+    {
+      "id": "marketing-ideas",
+      "name": "marketing-ideas",
+      "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't know how to market this,' 'brainstorm marketing,' or 'what marketing should I do.' Use this as a starting point whenever someone is stuck or looking for inspiration on how to grow. For specific channel execution, see the relevant skill (ads, social, emails, etc.).",
+      "path": "skills/marketing-ideas",
+      "file_count": 3
+    },
+    {
+      "id": "marketing-psychology",
+      "name": "marketing-psychology",
+      "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context. For applying psychology to specific pages, see cro; for pricing tactics, see pricing; for copy framing, see copywriting.",
+      "path": "skills/marketing-psychology",
+      "file_count": 2
+    },
+    {
+      "id": "mengtofrontend",
+      "name": "mengtofrontend",
+      "description": "Audit and refine landing pages to avoid generic AI-generated visual quality problems using Meng To's frontend design checklist. Use when Codex is asked to review, polish, improve, redesign, or prepare a landing page before launch, especially for typography, letter spacing, font choice, image authenticity, AI-generated visuals, prompt quality, micro-interactions, and final human design details.",
+      "path": "skills/mengtofrontend",
+      "file_count": 2
+    },
+    {
+      "id": "minimalist-ui",
+      "name": "minimalist-ui",
+      "description": "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
+      "path": "skills/minimalist-ui",
+      "file_count": 1
+    },
+    {
+      "id": "obscura-browser-mcp",
+      "name": "obscura-browser-mcp",
+      "description": "Use the local Obscura MCP browser server from Codex as the default worker browser for fast DOM/text web automation, page extraction, form interaction, cookies/storage checks, console/network diagnostics, and agent browser work where screenshots are not required. Use when the user mentions Obscura, asks whether an agent can browse or act on their behalf through MCP, wants to verify Obscura MCP access, compare Obscura with Chrome/Playwright, or run web research, scraping, smoke checks, or browser workflows that can be proven with DOM/text evidence rather than visual screenshots.",
+      "path": "skills/obscura-browser-mcp",
+      "file_count": 3
+    },
+    {
+      "id": "oklch-skill",
+      "name": "oklch-skill",
+      "description": "OKLCH color space for web projects. Convert hex/rgb/hsl to oklch, generate palettes, check contrast, handle gamut boundaries, and theme with Tailwind v4. Triggers on oklch, color conversion, palette generation, contrast ratio, gamut, display p3, design tokens, hue drift, chroma, dark mode colors.",
+      "path": "skills/oklch-skill",
+      "file_count": 5
+    },
+    {
+      "id": "onboarding",
+      "name": "onboarding",
+      "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run experience,\" \"empty states,\" \"onboarding checklist,\" \"aha moment,\" \"new user experience,\" \"users aren't activating,\" \"nobody completes setup,\" \"low activation rate,\" \"users sign up but don't use the product,\" \"time to value,\" or \"first session experience.\" Use this whenever users are signing up but not sticking around. For signup/registration optimization, see signup. For ongoing email sequences, see emails.",
+      "path": "skills/onboarding",
+      "file_count": 3
+    },
+    {
+      "id": "orca-cli",
+      "name": "orca-cli",
+      "description": ">-",
+      "path": "skills/orca-cli",
+      "file_count": 1
+    },
+    {
+      "id": "orchestration",
+      "name": "orchestration",
+      "description": ">-",
+      "path": "skills/orchestration",
+      "file_count": 1
+    },
+    {
+      "id": "patch-diff-exploit",
+      "name": "patch-diff-exploit",
+      "description": "|",
+      "path": "skills/patch-diff-exploit",
+      "file_count": 4
+    },
+    {
+      "id": "paywalls",
+      "name": "paywalls",
+      "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"feature gate,\" \"convert free to paid,\" \"freemium conversion,\" \"trial expiration screen,\" \"limit reached screen,\" \"plan upgrade prompt,\" \"in-app pricing,\" \"free users won't upgrade,\" \"trial to paid conversion,\" or \"how do I get users to pay.\" Use this for any in-product moment where you're asking users to upgrade. Distinct from public pricing pages (see cro) \u2014 this focuses on in-product upgrade moments where the user has already experienced value. For pricing decisions, see pricing.",
+      "path": "skills/paywalls",
+      "file_count": 3
+    },
+    {
+      "id": "pentest-tools",
+      "name": "pentest-tools",
+      "description": "|",
+      "path": "skills/pentest-tools",
+      "file_count": 114
+    },
+    {
+      "id": "planning-orchestrator",
+      "name": "planning-orchestrator",
+      "description": "Orchestrate research and save an implementation-ready plan file through a goal-backed planning loop for large product, UI/UX, architecture, migration, or implementation programs. Use when the user asks for a planning conductor/orchestrator, comprehensive revamp plan, /goal-backed plan, design plan from reference images, website/product inspiration research, multi-surface project plan, or a roadmap to hand to an implementation orchestrator. Do not use for small tasks, one-file changes, audits of existing defects, or when the user wants code edits immediately.",
+      "path": "skills/planning-orchestrator",
+      "file_count": 2
+    },
+    {
+      "id": "popups",
+      "name": "popups",
+      "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimization,\" \"lead capture popup,\" \"email popup,\" \"announcement banner,\" \"overlay,\" \"collect emails with a popup,\" \"exit popup,\" \"scroll trigger,\" \"sticky bar,\" or \"notification bar.\" Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see cro. For general page conversion optimization, see cro.",
+      "path": "skills/popups",
+      "file_count": 2
+    },
+    {
+      "id": "pr-ci-status-monitor",
+      "name": "pr-ci-status-monitor",
+      "description": "Check pull requests, CI failures, review comments, CodeRabbit feedback, GitHub issue/bounty status, Algora or payout claim state, and required next actions. Use when the user asks to check PR status, CI status, failing checks, review comments, CodeRabbit comments, whether something was merged/paid/rewarded/blocked, contribution or bounty status, or asks for a concise monitor/update on GitHub work.",
+      "path": "skills/pr-ci-status-monitor",
+      "file_count": 2
+    },
+    {
+      "id": "pricing",
+      "name": "pricing",
+      "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge,' 'my pricing is wrong,' 'pricing page,' 'annual vs monthly,' 'per seat pricing,' or 'should I offer a free plan.' Use this whenever someone is figuring out what to charge or how to structure their plans. For in-app upgrade screens, see paywalls.",
+      "path": "skills/pricing",
+      "file_count": 4
+    },
+    {
+      "id": "product-marketing",
+      "name": "product-marketing",
+      "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills \u2014 it creates `.agents/product-marketing.md` that all other skills reference for product, audience, and positioning context.",
+      "path": "skills/product-marketing",
+      "file_count": 2
+    },
+    {
+      "id": "production-readiness-gate",
+      "name": "production-readiness-gate",
+      "description": "Audit launch, deploy, staging, production, release, or go-live readiness from evidence. Use when asked whether an app/site/workflow is ready to ship, public-launch ready, deployment-ready, production-ready, or what blocks release. Do not use for ordinary code review unless the user needs a readiness verdict.",
+      "path": "skills/production-readiness-gate",
+      "file_count": 3
+    },
+    {
+      "id": "programmatic-seo",
+      "name": "programmatic-seo",
+      "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location pages,\" \"[keyword] + [city] pages,\" \"comparison pages,\" \"integration pages,\" \"building many pages for SEO,\" \"pSEO,\" \"generate 100 pages,\" \"data-driven pages,\" or \"templated landing pages.\" Use this whenever someone wants to create many similar pages targeting different keywords or locations. For auditing existing SEO issues, see seo-audit. For content strategy planning, see content-strategy.",
+      "path": "skills/programmatic-seo",
+      "file_count": 3
+    },
+    {
       "id": "project-task-decomposer",
-      "path": "skills/project-task-decomposer",
       "name": "project-task-decomposer",
-      "version": "1.1.0",
       "description": "Use when converting a PRD, product handoff, spec, architecture brief, roadmap, or implementation plan into a versioned, dependency-aware task corpus (hundreds to thousands of leaf tasks) for a Software Orchestrator. Supports PRD_ONLY, PRD_PLUS_REPO, and CORPUS_UPDATE. Does not implement the product or permanently assign models.",
-      "file_count": 75,
-      "platforms": [
-        "grok-build",
-        "hermes",
-        "codex-agents"
-      ],
-      "category": "orchestration"
+      "path": "skills/project-task-decomposer",
+      "file_count": 82
+    },
+    {
+      "id": "pwn-chain",
+      "name": "pwn-chain",
+      "description": "|",
+      "path": "skills/pwn-chain",
+      "file_count": 4
+    },
+    {
+      "id": "radare2",
+      "name": "radare2",
+      "description": "|",
+      "path": "skills/radare2",
+      "file_count": 4
+    },
+    {
+      "id": "redesign-existing-projects",
+      "name": "redesign-existing-projects",
+      "description": "On-demand audit and targeted upgrade of an existing website or app's design.",
+      "path": "skills/redesign-existing-projects",
+      "file_count": 2
+    },
+    {
+      "id": "referrals",
+      "name": "referrals",
+      "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch.",
+      "path": "skills/referrals",
+      "file_count": 4
+    },
+    {
+      "id": "release-handoff-summary",
+      "name": "release-handoff-summary",
+      "description": "Summarize latest changes, release readiness, deployment state, verification status, changelog notes, documentation updates, and remaining next steps. Use when the user asks \"what changed\", \"latest changes\", \"what is left\", \"next tasks\", \"release prep\", \"changelog\", \"handoff\", \"status update\", \"are we ready to ship\", \"summarize this project\", or wants a concise done/left/blocked plan after implementation.",
+      "path": "skills/release-handoff-summary",
+      "file_count": 2
+    },
+    {
+      "id": "repo-audit-to-remediation",
+      "name": "repo-audit-to-remediation",
+      "description": "Audit a local repository, identify the highest-value defects or gaps, implement focused fixes, verify them, and leave a concise backlog or handoff. Use when the user asks for a codebase audit, comprehensive review, top priority issues, improvements, remediation plan, \"fix the top issues\", security/UX/performance/test/docs audit, repo health check, or an audit-to-patches workflow.",
+      "path": "skills/repo-audit-to-remediation",
+      "file_count": 2
+    },
+    {
+      "id": "research-plan-implementation-loop",
+      "name": "research-plan-implementation-loop",
+      "description": "Use when the user asks for research that should lead to planning, implementation, product changes, build decisions, or an end-to-end loop rather than a standalone research answer.",
+      "path": "skills/research-plan-implementation-loop",
+      "file_count": 9
+    },
+    {
+      "id": "resume-disconnected-work",
+      "name": "resume-disconnected-work",
+      "description": "Resume disconnected, stale, or out-of-context Codex work from available local evidence. Use when the user says to resume, continue previous work, recover a lost thread, check whether prior work was done, or continue after a disconnect. Do not use for a normal fresh task with a clear current repo and no prior-state dependency.",
+      "path": "skills/resume-disconnected-work",
+      "file_count": 3
+    },
+    {
+      "id": "reverse-engineering",
+      "name": "reverse-engineering",
+      "description": "Provides reverse engineering techniques. Use when the main job is to understand how a compiled, obfuscated, packed, or virtualized target works before exploiting or solving it, including binaries, APKs, WASM, firmware, custom VMs, bytecode, malware-like loaders, and anti-debug or anti-analysis logic. Do not use it when the vulnerability is already understood and the remaining task is exploitation; use pwn instead. Do not use it for pure web workflows, log or disk forensics, or standalone crypto problems unless reversing the implementation is the real blocker.",
+      "path": "skills/reverse-engineering",
+      "file_count": 24
+    },
+    {
+      "id": "review-animations",
+      "name": "review-animations",
+      "description": "Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned.",
+      "path": "skills/review-animations",
+      "file_count": 2
+    },
+    {
+      "id": "reviewing-capability-usage",
+      "name": "reviewing-capability-usage",
+      "description": "Use when the user asks to review recent skill, tool, subagent, browser, memory, connector, goal, or local capability usage, especially to find missed capabilities, overuse, overclaiming, redundancy, or whether a new skill is justified.",
+      "path": "skills/reviewing-capability-usage",
+      "file_count": 8
+    },
+    {
+      "id": "revops",
+      "name": "revops",
+      "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see emails. For pricing decisions, see pricing.",
+      "path": "skills/revops",
+      "file_count": 6
+    },
+    {
+      "id": "root-cause-investigator",
+      "name": "root-cause-investigator",
+      "description": "Root cause analysis for bugs, failures, regressions, incidents, broken flows, failing tests/builds/CI, production errors, or odd behavior. Use when the user says something is broken, failing, disappearing, timing out, returning errors, not loading, not working, behaving oddly, asks for root cause analysis/RCA, says \"don't change anything yet\", or wants diagnosis of UI, backend, auth, database, API, webhooks, logs, deploys, third-party integrations, CI, or production behavior. Start read-only, use logs/telemetry when available, narrow plausible causes to the proven cause, then produce a minimal fix plan.",
+      "path": "skills/root-cause-investigator",
+      "file_count": 2
+    },
+    {
+      "id": "safari-web-extensions",
+      "name": "safari-web-extensions",
+      "description": "Build, package, test, and reason about Safari Web Extensions for iOS, iPadOS, and macOS. Use when creating or modifying Safari extensions, WebExtension manifests/content scripts/background scripts/popups/options pages, extension-native app messaging, App Store packaging, Safari permissions, or Safari-specific debugging.",
+      "path": "skills/safari-web-extensions",
+      "file_count": 2
+    },
+    {
+      "id": "sales-enablement",
+      "name": "sales-enablement",
+      "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitors. For marketing website copy, see copywriting. For cold outreach emails, see cold-email.",
+      "path": "skills/sales-enablement",
+      "file_count": 6
+    },
+    {
+      "id": "sandbox-sdk",
+      "name": "sandbox-sdk",
+      "description": "Build sandboxed applications for secure code execution. Load when building AI code execution, code interpreters, CI/CD systems, interactive dev environments, or executing untrusted code. Covers Sandbox SDK lifecycle, commands, files, code interpreter, and preview URLs. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+      "path": "skills/sandbox-sdk",
+      "file_count": 3
+    },
+    {
+      "id": "schema",
+      "name": "schema",
+      "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \"schema markup,\" \"structured data,\" \"JSON-LD,\" \"rich snippets,\" \"schema.org,\" \"FAQ schema,\" \"product schema,\" \"review schema,\" \"breadcrumb schema,\" \"Google rich results,\" \"knowledge panel,\" \"star ratings in search,\" or \"add structured data.\" Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo.",
+      "path": "skills/schema",
+      "file_count": 3
+    },
+    {
+      "id": "sentry",
+      "name": "sentry",
+      "description": "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry CLI; perform read-only queries using the `sentry` command.",
+      "path": "skills/sentry",
+      "file_count": 5
+    },
+    {
+      "id": "sentry-cli",
+      "name": "sentry-cli",
+      "description": "Guide for using the Sentry CLI to interact with Sentry from the command line. Use when the user asks about viewing issues, events, projects, organizations, making API calls, or authenticating with Sentry via CLI.",
+      "path": "skills/sentry-cli",
+      "file_count": 27
+    },
+    {
+      "id": "seo-audit",
+      "name": "seo-audit",
+      "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" \"SEO health check,\" \"my traffic dropped,\" \"lost rankings,\" \"not showing up in Google,\" \"site isn't ranking,\" \"Google update hit me,\" \"page speed,\" \"core web vitals,\" \"crawl errors,\" or \"indexing issues.\" Use this even if the user just says something vague like \"my SEO is bad\" or \"help with SEO\" \u2014 start with an audit. For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema. For AI search optimization, see ai-seo.",
+      "path": "skills/seo-audit",
+      "file_count": 4
+    },
+    {
+      "id": "shadcn",
+      "name": "shadcn",
+      "description": "Manages shadcn components and projects \u2014 adding, searching, fixing, debugging, styling, and composing UI, including chat interfaces. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for \"shadcn init\", \"create an app with --preset\", or \"switch to --preset\".",
+      "path": "skills/shadcn",
+      "file_count": 15
+    },
+    {
+      "id": "signup",
+      "name": "signup",
+      "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial signup,\" \"reduce signup dropoff,\" \"account creation flow,\" \"people aren't signing up,\" \"signup abandonment,\" \"trial conversion rate,\" \"nobody completes registration,\" \"too many steps to sign up,\" or \"simplify our signup.\" Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding. For lead capture forms (not account creation), see cro.",
+      "path": "skills/signup",
+      "file_count": 2
+    },
+    {
+      "id": "site-architecture",
+      "name": "site-architecture",
+      "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \"sitemap,\" \"site map,\" \"visual sitemap,\" \"site structure,\" \"page hierarchy,\" \"information architecture,\" \"IA,\" \"navigation design,\" \"URL structure,\" \"breadcrumbs,\" \"internal linking strategy,\" \"website planning,\" \"what pages do I need,\" \"how should I organize my site,\" or \"site navigation.\" Use this whenever someone is planning what pages a website should have and how they connect. NOT for XML sitemaps (that's technical SEO \u2014 see seo-audit). For SEO audits, see seo-audit. For structured data, see schema.",
+      "path": "skills/site-architecture",
+      "file_count": 5
+    },
+    {
+      "id": "social",
+      "name": "social",
+      "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' 'grow my following,' 'TikTok video,' 'Reels,' 'Shorts,' 'video script,' 'video hook,' 'short-form video,' or 'create a reel.' Use this for social media content creation, repurposing, scheduling, and short-form video scripting. For broader content strategy, see content-strategy. For paid video ads, see ad-creative.",
+      "path": "skills/social",
+      "file_count": 7
     },
     {
       "id": "software-orchestrator",
-      "path": "skills/software-orchestrator",
       "name": "software-orchestrator",
-      "version": "0.3.0",
       "description": "Use when invoking Software Orchestrator as a /goal-style run with an attached plan/PRD/doc until every in-scope item is verified. Includes cold-start priors for host models (Cline-pass, Antigravity, Kilo free): strengths, thinking levels, specialty routing. Grok orchestrates; workers execute; live outcomes update the capability store.",
-      "file_count": 23,
-      "platforms": [
-        "grok-build",
-        "hermes",
-        "codex-agents"
-      ],
-      "category": "orchestration"
+      "path": "skills/software-orchestrator",
+      "file_count": 28
+    },
+    {
+      "id": "steel-browser",
+      "name": "steel-browser",
+      "description": "Use this skill for live web tasks where WebFetch or curl would fail or be insufficient: JavaScript-rendered pages, forms, screenshots, PDFs, login flows, CAPTCHA/bot-protection flows, and multi-step navigation. It runs a real Steel cloud browser through the Steel CLI. Use when the agent should visit, click, type, scrape, screenshot, or extract now. Do not use for writing reusable Steel SDK/API code; use steel-developer for code. If a live task fails, hand off to steel-session-debugging; if evidence points to bot detection, proxies, CAPTCHA, or identity, hand off to steel-reliability.",
+      "path": "skills/steel-browser",
+      "file_count": 7
+    },
+    {
+      "id": "steel-developer",
+      "name": "steel-developer",
+      "description": "Use this skill when the user wants reusable code, scripts, examples, or docs that build on Steel cloud browsers with SDKs, REST APIs, Playwright, Puppeteer, Stagehand, Browser Use, credentials, profiles, files, extensions, embeds, proxies, or CAPTCHA APIs. Do not use for live web browsing performed by the agent; use steel-browser. Route failed-session diagnosis to steel-session-debugging and reliability mitigation to steel-reliability.",
+      "path": "skills/steel-developer",
+      "file_count": 12
+    },
+    {
+      "id": "steel-reliability",
+      "name": "steel-reliability",
+      "description": "Use this skill when a Steel automation appears unreliable because of bot detection, CAPTCHA loops, 403/access-denied or verify-you-are-human pages, proxy failures, profile or identity problems, credential or login persistence issues, suspicious pacing, redirect loops, or retry strategy, or when the user asks about stealth, proxies, CAPTCHA solving, profiles, credentials, or reliable logins. Do not use as a first step for unknown failed sessions; collect evidence with steel-session-debugging first when needed.",
+      "path": "skills/steel-reliability",
+      "file_count": 13
+    },
+    {
+      "id": "steel-session-debugging",
+      "name": "steel-session-debugging",
+      "description": "Use this skill when the user provides a failed Steel session ID, failed automation run, timeout, browser error, blocked page, or unexpected result and wants evidence-backed diagnosis from session metadata, browser logs, raw agent logs, semantic traces, replay links, screenshots, network failures, or errors. Do not use for first-pass bot mitigation; collect evidence here, then hand off to steel-reliability for proxy, CAPTCHA, identity, or anti-bot fixes.",
+      "path": "skills/steel-session-debugging",
+      "file_count": 13
+    },
+    {
+      "id": "steel-skill-creator",
+      "name": "steel-skill-creator",
+      "description": "Use this skill when the user wants to turn a recurring browser workflow into a reusable, parameterized agent skill, especially when the task has concrete inputs and a clear output such as scheduled scrapes, form submissions, data extraction, monitoring flows, price probes, or login-gated reports. Do not use for one-off web tasks; use steel-browser.",
+      "path": "skills/steel-skill-creator",
+      "file_count": 23
+    },
+    {
+      "id": "stitch-design-taste",
+      "name": "stitch-design-taste",
+      "description": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards \u2014 strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.",
+      "path": "skills/stitch-design-taste",
+      "file_count": 2
+    },
+    {
+      "id": "tdd",
+      "name": "tdd",
+      "description": "Use test-driven development when the user asks for test-first work, red-green-refactor, integration tests, or when a requested implementation touches business logic, data integrity, auth, payments, scheduling, migrations, or a bug that needs a regression test. Prefer existing repo test tools and keep the loop focused.",
+      "path": "skills/tdd",
+      "file_count": 4
+    },
+    {
+      "id": "toolcraft-brainstorming",
+      "name": "toolcraft-brainstorming",
+      "description": "Toolcraft: use before creating generated app features, changing behavior, or assembling app specs.",
+      "path": "skills/toolcraft-brainstorming",
+      "file_count": 1
+    },
+    {
+      "id": "toolcraft-browser",
+      "name": "toolcraft-browser",
+      "description": "Toolcraft: use to verify generated apps in a real local browser after implementation.",
+      "path": "skills/toolcraft-browser",
+      "file_count": 1
+    },
+    {
+      "id": "toolcraft-figma",
+      "name": "toolcraft-figma",
+      "description": "Toolcraft: use when a generated app task includes a Figma URL, node ID, or design-to-code requirement.",
+      "path": "skills/toolcraft-figma",
+      "file_count": 1
+    },
+    {
+      "id": "toolcraft-figma-implement-design",
+      "name": "toolcraft-figma-implement-design",
+      "description": "Toolcraft: use to translate inspected Figma structure into a production-ready generated app.",
+      "path": "skills/toolcraft-figma-implement-design",
+      "file_count": 1
+    },
+    {
+      "id": "toolcraft-systematic-debugging",
+      "name": "toolcraft-systematic-debugging",
+      "description": "Toolcraft: use before fixing broken controls, tests, builds, visual mismatches, exports, or runtime regressions.",
+      "path": "skills/toolcraft-systematic-debugging",
+      "file_count": 1
+    },
+    {
+      "id": "toolcraft-writing-plans",
+      "name": "toolcraft-writing-plans",
+      "description": "Toolcraft: use before code changes once generated app behavior or an approved spec is clear.",
+      "path": "skills/toolcraft-writing-plans",
+      "file_count": 1
+    },
+    {
+      "id": "transitions-dev",
+      "name": "transitions-dev",
+      "description": "Production-ready CSS transitions for web apps. Use when implementing or replacing motion for badges, dropdowns, modals, panels, page changes, resizing cards, number or text swaps, icon swaps, success and error states, hover effects, search clearing, skeletons, shimmer, tabs, tooltips, staggered reveals, 3D tilt, menu morphs, accordions, or expand and collapse behavior. Also use for the transitions reveal and transitions apply commands. For auditing existing motion against motion tokens, reviewing animations, or tuning durations, use transitions-polish instead.",
+      "path": "skills/transitions-dev",
+      "file_count": 23
+    },
+    {
+      "id": "transitions-polish",
+      "name": "transitions-polish",
+      "description": "Polish and refine existing motion against the transitions.dev motion-token scale \u2014 duration, distance, scale, blur, and easing \u2014 plus the rules for WHEN each token applies (open/close asymmetry, hover-in vs hover-out, stagger offsets, and intent delays). An add-on to the transitions-dev skill, focused on tuning what already animates rather than adding new transitions. Use when the user asks to \"polish my transitions\", \"refine the motion\", \"tune the timing / easing\", \"make the animation feel better / less janky\", \"tighten the durations\", \"fix the stagger\", \"align to the motion tokens\", \"audit the motion\", \"review my animations\", \"scan for ad-hoc transitions\", \"tokenize my animations\", or runs the commands transitions review or transitions polish. Also drives the Refine panel's Small refinement feature. Triggers on \"motion polish\", \"transition polish\", \"refine motion\", \"timing feels off\", \"too slow / too fast\", \"stagger\", \"delay\", \"open close timing\", \"hover in out\".",
+      "path": "skills/transitions-polish",
+      "file_count": 3
+    },
+    {
+      "id": "unknown-diff-commit-gate",
+      "name": "unknown-diff-commit-gate",
+      "description": "Review an ambiguous dirty git worktree before committing. Use when the user says changes may or may not be worthy, asks to inspect uncommitted work, commit only good changes, separate user/concurrent edits, or decide whether local diffs are safe. Do not use when the user already specified an exact commit scope.",
+      "path": "skills/unknown-diff-commit-gate",
+      "file_count": 2
+    },
+    {
+      "id": "verified-research",
+      "name": "verified-research",
+      "description": "Use when the user asks to research, investigate, compare sources, verify claims, evaluate evidence, or produce an evidence-backed answer or dossier without immediately implementing changes.",
+      "path": "skills/verified-research",
+      "file_count": 9
+    },
+    {
+      "id": "video",
+      "name": "video",
+      "description": "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 'HeyGen,' 'Synthesia,' 'Veo,' 'Runway,' 'Kling,' 'Pika,' 'video generation,' 'AI avatar,' 'talking head video,' 'programmatic video,' 'video template,' 'explainer video,' 'product demo video,' 'video pipeline,' or 'make me a video.' Use this for video creation, generation, and production workflows. For video content strategy and what to post, see social. For paid video ad creative, see ad-creative.",
+      "path": "skills/video",
+      "file_count": 3
+    },
+    {
+      "id": "visual-qa",
+      "name": "visual-qa",
+      "description": "Use after frontend, UI, UX, visual polish, responsive layout, design-to-code, dashboard, website, app-screen, or TUI changes when the result must be checked visually with screenshots, browser/TUI evidence, viewports, states, overflow, or interaction smoke tests.",
+      "path": "skills/visual-qa",
+      "file_count": 1
+    },
+    {
+      "id": "web-perf",
+      "name": "web-perf",
+      "description": "Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (LCP, INP, CLS) and supplementary metrics (FCP, TBT, Speed Index), identifies render-blocking resources, network dependency chains, layout shifts, caching issues, and accessibility gaps. Use when asked to audit, profile, debug, or optimize page load performance, Lighthouse scores, or site speed. Biases towards retrieval from current documentation over pre-trained knowledge.",
+      "path": "skills/web-perf",
+      "file_count": 1
+    },
+    {
+      "id": "workers-best-practices",
+      "name": "workers-best-practices",
+      "description": "Reviews and authors Cloudflare Workers code against production best practices. Load when writing new Workers, reviewing Worker code, configuring wrangler.jsonc, or checking for common Workers anti-patterns (streaming, floating promises, global state, secrets, bindings, observability). Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+      "path": "skills/workers-best-practices",
+      "file_count": 3
+    },
+    {
+      "id": "workflow-mining-to-skills",
+      "name": "workflow-mining-to-skills",
+      "description": "Mine accessible Codex, ChatGPT, repo, memory, transcript, or project history to identify repeated workflows and create or update skills. Use when asked to review prior threads/sessions, workflow-mine, author skills from repeated work, deduplicate skills, or decide what belongs in skills versus AGENTS/scripts/automations. Do not use when creating a single user-specified skill without history analysis.",
+      "path": "skills/workflow-mining-to-skills",
+      "file_count": 2
+    },
+    {
+      "id": "wrangler",
+      "name": "wrangler",
+      "description": "Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1, Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store. Load before running wrangler commands to ensure correct syntax and best practices. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+      "path": "skills/wrangler",
+      "file_count": 1
+    },
+    {
+      "id": "writing-great-skills",
+      "name": "writing-great-skills",
+      "description": "Use when creating, editing, reviewing, or adapting agent skills in ~/.agents/skills or ~/.codex/skills, especially to reduce ambient bloat, decide model-vs-user invocation, tighten descriptions, prune duplicate instructions, or make a skill fit the local Codex operating style.",
+      "path": "skills/writing-great-skills",
+      "file_count": 2
+    },
+    {
+      "id": "x-opportunity-reality-check",
+      "name": "x-opportunity-reality-check",
+      "description": "Fact-check and evaluate X posts, GitHub repos, trading bots, Polymarket/Kalshi/crypto/AI automation claims, side-income ideas, bounty claims, and business opportunities for realism. Use when the user asks \"is this real\", \"is this legit\", \"can this make money\", \"how realistic is this\", sends an X post/thread/article with a repo or guide, asks about trading bots, delta-neutral or arbitrage claims, passive income claims, GitHub project viability, or wants odds, risks, and a practical go/no-go recommendation.",
+      "path": "skills/x-opportunity-reality-check",
+      "file_count": 2
     }
   ]
 }
