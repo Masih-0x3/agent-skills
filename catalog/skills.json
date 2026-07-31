@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "description": "Portable snapshot of the owner's personal and approved third-party skills.",
-  "skill_count": 152,
+  "skill_count": 155,
   "skills": [
     {
       "id": "ab-testing",
@@ -64,7 +64,7 @@
       "name": "apk-reverse",
       "description": "\u5728 CLI \u73af\u5883\u4e0b\u505a Android APK \u9006\u5411\u65f6\u4f7f\u7528\u3002\u9002\u7528\u4e8e APK \u89e3\u5305\u3001Java \u53cd\u7f16\u8bd1\u3001smali \u4fee\u6539\u3001\u91cd\u6253\u5305\u3001Frida \u52a8\u6001 Hook\uff0c\u4ee5\u53ca\u6309\u9700\u5207\u6362\u5230 so/native \u5206\u6790\u3002\u4f18\u5148\u4f7f\u7528\u672c\u673a\u5df2\u5b89\u88c5\u7684 jadx\u3001apktool\u3001frida\u3001adb\u3001ida-reverse\u3001radare2\u3002",
       "path": "skills/apk-reverse",
-      "file_count": 13
+      "file_count": 12
     },
     {
       "id": "apple-design",
@@ -333,10 +333,10 @@
       "file_count": 6
     },
     {
-      "id": "diffui",
+      "id": "diffui-designer",
       "name": "diffui-designer",
       "description": ">-",
-      "path": "skills/diffui",
+      "path": "skills/diffui-designer",
       "file_count": 2
     },
     {
@@ -669,6 +669,13 @@
       "file_count": 2
     },
     {
+      "id": "playwright",
+      "name": "playwright",
+      "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+      "path": "skills/playwright",
+      "file_count": 9
+    },
+    {
       "id": "popups",
       "name": "popups",
       "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimization,\" \"lead capture popup,\" \"email popup,\" \"announcement banner,\" \"overlay,\" \"collect emails with a popup,\" \"exit popup,\" \"scroll trigger,\" \"sticky bar,\" or \"notification bar.\" Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see cro. For general page conversion optimization, see cro.",
@@ -715,7 +722,7 @@
       "name": "project-task-decomposer",
       "description": "Use when converting a PRD, product handoff, spec, architecture brief, roadmap, or implementation plan into a versioned, dependency-aware task corpus (hundreds to thousands of leaf tasks) for a Software Orchestrator. Supports PRD_ONLY, PRD_PLUS_REPO, and CORPUS_UPDATE. Does not implement the product or permanently assign models.",
       "path": "skills/project-task-decomposer",
-      "file_count": 82
+      "file_count": 75
     },
     {
       "id": "pwn-chain",
@@ -933,6 +940,20 @@
       "description": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards \u2014 strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.",
       "path": "skills/stitch-design-taste",
       "file_count": 2
+    },
+    {
+      "id": "supabase",
+      "name": "supabase",
+      "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, declarative schemas, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
+      "path": "skills/supabase",
+      "file_count": 5
+    },
+    {
+      "id": "supabase-postgres-best-practices",
+      "name": "supabase-postgres-best-practices",
+      "description": "Postgres best practices maintained by Supabase, for Postgres running anywhere. Load this skill BEFORE writing or changing anything that lives in a Postgres database: creating or altering tables and columns (including choosing column types), schema design, migrations and declarative schema files, RLS policies and the tests that verify them, indexes, triggers, database functions, queues and scheduled jobs (pg_cron, pgmq), vector/semantic search (pgvector), and restoring dumps (pg_restore) or importing data. Also load it when diagnosing slow queries, high CPU, timeouts, EXPLAIN plans, connection exhaustion, locking, bloat, or rows visible to the wrong user or tenant. This is not just a performance guide \u2014 schema, migration, security, and SQL authoring tasks need these rules too, even for a one-column change or a single query.",
+      "path": "skills/supabase-postgres-best-practices",
+      "file_count": 37
     },
     {
       "id": "tdd",

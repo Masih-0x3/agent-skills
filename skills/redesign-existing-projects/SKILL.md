@@ -1,13 +1,6 @@
 ---
 name: redesign-existing-projects
 description: On-demand audit and targeted upgrade of an existing website or app's design.
-disable-model-invocation: true
-metadata:
-  upstream: https://github.com/elayadesign/redesign-skill
-  upstream_ref: main
-  upstream_commit: 64627f6ebe7a7a2f17c0affe4fe5838e2d46a876
-  upstream_path: skills/redesign-existing-projects/SKILL.md
-  upstream_sha256: 8ed4b9f5301edec67e87138322fe627fe0b1172aca4d73db8c23ed3ff1379b0d
 ---
 
 # Redesign Existing Projects
