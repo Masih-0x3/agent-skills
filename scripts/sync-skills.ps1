@@ -3,8 +3,7 @@ param(
     [ValidateSet('Agents', 'Codex', 'Both', 'All', 'Claude', 'Grok', 'Hermes', 'Cursor', 'Copilot', 'Custom')]
     [string]$Target = 'Both',
     [string]$Destination,
-    [switch]$DryRun,
-    [switch]$IncludeBlocked
+    [switch]$DryRun
 )
 
 $ErrorActionPreference = 'Stop'
@@ -26,7 +25,6 @@ if ($ConfiguredPython) {
 }
 if ($Destination) { $Arguments += @('--destination', $Destination) }
 if ($DryRun) { $Arguments += '--dry-run' }
-if ($IncludeBlocked) { $Arguments += '--include-blocked' }
 & $Executable @Arguments
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 Write-Host 'Restart the coding tool or open a new session to refresh skill discovery.'

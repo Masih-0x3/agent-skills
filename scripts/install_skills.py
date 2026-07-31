@@ -67,7 +67,6 @@ def main() -> int:
     parser.add_argument("--target", choices=[*TARGETS, "both", "all", "custom"], default="both")
     parser.add_argument("--destination", type=Path, help="required for --target custom")
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--include-blocked", action="store_true")
     args = parser.parse_args()
     available = skill_names()
     selected = args.skills or available
@@ -76,7 +75,7 @@ def main() -> int:
         parser.error(f"unknown skill(s): {', '.join(unknown)}")
     lock = json.loads(SOURCE_LOCK.read_text(encoding="utf-8"))
     blocked = {name for name, policy in lock.get("compatibility", {}).items() if policy.get("installable") is False}
-    selected = [name for name in selected if args.include_blocked or name not in blocked]
+    selected = [name for name in selected if name not in blocked]
     skipped = sorted(set(args.skills or available) - set(selected))
     for name in selected:
         parse_skill(name)

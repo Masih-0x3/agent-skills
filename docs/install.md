@@ -43,7 +43,7 @@ The installer never removes unrelated skills. A same-named package is copied to 
 
 ## Blocked packages
 
-Compatibility policy is stored in `catalog/sources.lock.json`. `pentest-tools` is skipped by default because Windows Defender blocks one reference file. Do not bypass endpoint protection. Review the package in an isolated environment before using `--include-blocked`.
+Compatibility policy is stored in `catalog/sources.lock.json`. `pentest-tools` is non-installable because Windows Defender blocks one reference file. The installer has no runtime bypass for blocked packages; an isolated security review and an explicit source-lock status change are required first.
 
 ## Lovable
 

@@ -7,6 +7,7 @@ import hashlib
 import json
 import re
 import subprocess
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -178,6 +179,11 @@ def load_source_lock() -> dict[str, Any]:
     return json.loads(SOURCE_LOCK.read_text(encoding="utf-8"))
 
 
+@lru_cache(maxsize=None)
+def commit_paths(commit: str) -> frozenset[str]:
+    return frozenset(str(_git("ls-tree", "-r", "--name-only", commit)).splitlines())
+
+
 def source_for(name: str, lock: dict[str, Any]) -> dict[str, str]:
     for source in lock["sources"]:
         explicit = source.get("skills", {})
@@ -191,6 +197,10 @@ def source_for(name: str, lock: dict[str, Any]) -> dict[str, str]:
             }
     baseline = next(source for source in lock["sources"] if source["id"] == "agent-skills-baseline")
     source_path = baseline.get("path_overrides", {}).get(name, baseline["path_template"].format(name=name))
+    if f"{source_path}/SKILL.md" not in commit_paths(baseline["commit"]):
+        raise ValueError(
+            f"skill {name!r} is absent from the baseline commit; add an explicit immutable source mapping"
+        )
     return {
         "id": baseline["id"],
         "repository": baseline["repository"],

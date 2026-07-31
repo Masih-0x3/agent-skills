@@ -38,7 +38,7 @@ Preview the default Codex and Agents sync, then apply it:
 ./scripts/sync-skills.sh --target both
 ```
 
-The installer stages and validates each package, atomically replaces only the same-named destination, and preserves unrelated local skills. Blocked packages are skipped unless `--include-blocked` / `-IncludeBlocked` is explicit.
+The installer stages and validates each package, atomically replaces only the same-named destination, and preserves unrelated local skills. Packages marked non-installable are always skipped until their review status is resolved in the source lock.
 
 Supported targets:
 

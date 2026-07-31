@@ -4,6 +4,7 @@
 import unittest
 
 from assert_repository_target import repository_from_remote
+from skilllib import load_source_lock, source_for
 
 
 class RepositoryFromRemoteTests(unittest.TestCase):
@@ -36,6 +37,12 @@ class RepositoryFromRemoteTests(unittest.TestCase):
             repository_from_remote("https://github.com/extra/Masih-0x3/agent-skills"),
             "",
         )
+
+
+class SourceProvenanceTests(unittest.TestCase):
+    def test_rejects_skill_missing_from_baseline(self) -> None:
+        with self.assertRaisesRegex(ValueError, "explicit immutable source mapping"):
+            source_for("not-in-the-baseline", load_source_lock())
 
 
 if __name__ == "__main__":
