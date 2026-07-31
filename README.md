@@ -1,146 +1,108 @@
 # Agent Skills
 
-Personal, production-oriented **agent skills** for Grok Build, Hermes, Codex/Agents, and compatible CLIs.
+Private, canonical source of truth for 155 portable agent skills used across Codex, Agents-compatible tools, and other coding assistants.
 
-This repository is a **skill monorepo**: each skill is a self-contained package under `skills/` with its own `SKILL.md`, schemas, scripts, references, examples, and tests.
+Each package lives at `skills/<name>/` and has a `SKILL.md` whose only frontmatter fields are `name` and `description`. Source provenance, host-specific extensions, compatibility, and integrity hashes live in `catalog/`.
 
-## Skills
+This repository is **not** mirrored into SkillMap. Publication must target `Masih-0x3/agent-skills` and is guarded by `scripts/assert_repository_target.py`.
 
-This private repository is the portable source of truth for 152 skills: the owner's personal skills, approved third-party snapshots, and the two original orchestration packages. The complete machine-readable inventory is [`catalog/skills.json`](catalog/skills.json).
+## Validate
 
-It deliberately excludes Codex's bundled `.system` skills and plugin-cache skills. Install or update those through Codex on each machine; copying them here would make the repository stale and platform-dependent.
+Windows:
 
-## Recommended pipeline
-
-```text
-PRD / handoff / plan
-        │
-        ▼
- project-task-decomposer
-        │  .orchestrator/plans/<slug>/<version>/
-        ▼
- software-orchestrator   (/goal style, run to completion)
-        │
-        ▼
- integrated software + outcome learning
+```powershell
+py -3 .\scripts\build_catalog.py --check
+.\scripts\validate-all.ps1
 ```
+
+macOS, Linux, Git Bash, or WSL:
+
+```bash
+python3 scripts/build_catalog.py --check
+./scripts/validate-all.sh
+```
+
+The generated catalogs include immutable source commits, package digests, per-file SHA-256 hashes, file sizes, executable-content flags, and import compatibility.
 
 ## Install
 
-### Sync the full library (recommended)
-
-Clone this private repository on a machine, then run the native sync command. It copies every package to both global discovery roots and does not remove unrelated local skills.
+Preview the default Codex and Agents sync, then apply it:
 
 ```powershell
-git clone https://github.com/Masih-0x3/agent-skills.git $HOME\agent-skills
-cd $HOME\agent-skills
-.\scripts\sync-skills.ps1
+.\scripts\sync-skills.ps1 -Target Both -DryRun
+.\scripts\sync-skills.ps1 -Target Both
 ```
-
-On macOS or Linux:
 
 ```bash
-git clone https://github.com/Masih-0x3/agent-skills.git ~/agent-skills
-cd ~/agent-skills
-./scripts/sync-skills.sh
+./scripts/sync-skills.sh --target both --dry-run
+./scripts/sync-skills.sh --target both
 ```
 
-Use `--target agents` / `--target codex` in Bash or `-Target Agents` / `-Target Codex` in PowerShell to install to only one location. Restart Codex or open a new session afterwards.
+The installer stages and validates each package, atomically replaces only the same-named destination, and preserves unrelated local skills. Blocked packages are skipped unless `--include-blocked` / `-IncludeBlocked` is explicit.
 
-### One skill (legacy helper)
+Supported targets:
+
+| Target | Destination |
+|---|---|
+| `agents` | `~/.agents/skills` |
+| `codex` | `~/.codex/skills` |
+| `claude` | `~/.claude/skills` |
+| `grok` | `~/.grok/skills` |
+| `hermes` | `~/.hermes/skills/software-development` |
+| `cursor` | `./.cursor/skills` |
+| `copilot` | `./.github/skills` |
+| `custom` | Explicit `--destination` / `-Destination` |
+
+Install one skill:
 
 ```bash
-# Grok Build
-mkdir -p ~/.grok/skills
-cp -R skills/software-orchestrator ~/.grok/skills/
-cp -R skills/project-task-decomposer ~/.grok/skills/
-
-# Hermes
-mkdir -p ~/.hermes/skills/software-development
-cp -R skills/software-orchestrator ~/.hermes/skills/software-development/
-cp -R skills/project-task-decomposer ~/.hermes/skills/software-development/
-
-# Codex / Agents global
-mkdir -p ~/.agents/skills
-cp -R skills/software-orchestrator ~/.agents/skills/
-cp -R skills/project-task-decomposer ~/.agents/skills/
+./scripts/install-skill.sh playwright --target agents
+python3 scripts/install_skills.py supabase --target custom --destination /path/to/project/.agents/skills
 ```
 
-### Helper script
+See [`docs/install.md`](docs/install.md) for platform-specific examples.
 
-```bash
-./scripts/install-skill.sh software-orchestrator --target all
-./scripts/install-skill.sh project-task-decomposer --target all
+## Lovable ZIP import
+
+The repository remains private, so use deterministic per-skill ZIP upload rather than a public GitHub URL:
+
+```powershell
+py -3 .\scripts\export_lovable.py playwright --output .\dist\lovable --check
 ```
 
-### Project-local
+Each ZIP contains one wrapping skill directory. A sidecar manifest records every file hash and the package tree digest. Export fails closed when a package is blocked or exceeds Lovable's documented file-count, file-size, total-size, or `SKILL.md` size limits.
 
-```bash
-mkdir -p .grok/skills .agents/skills
-cp -R skills/software-orchestrator .grok/skills/
-cp -R skills/project-task-decomposer .grok/skills/
-```
-
-See [docs/install.md](docs/install.md).
-
-## Invoke
-
-```text
-/project-task-decomposer
-Analyze @docs/product-handoff.md in PRD_PLUS_REPO mode.
-Plan version: 1.0.0
-
-/software-orchestrator
-Invoke Software Orchestrator on .orchestrator/plans/<slug>/1.0.0/
-# or attach a plan document and run goal-mode to completion
-```
+`cloudflare` remains in the canonical library but exceeds Lovable's 200-file limit. `pentest-tools` remains tracked but is blocked from default installation and export pending review of a Windows Defender-triggered reference.
 
 ## Repository layout
 
 ```text
 agent-skills/
-  README.md
-  AGENTS.md
-  LICENSE
-  CONTRIBUTING.md
-  catalog/skills.json
-  docs/
-    install.md
-    architecture.md
+  catalog/
+    skills.json                 # searchable package catalog
+    integrity.json              # per-file SHA-256 manifest
+    sources.lock.json           # immutable sources and compatibility policy
+    frontmatter-extensions.json # preserved host-specific metadata
   scripts/
-    install-skill.sh
-    validate-all.sh
-  skills/
-    software-orchestrator/     # full package (schemas, scripts, priors, …)
-    project-task-decomposer/   # full package (schemas, scripts, example corpus, tests, …)
+    build_catalog.py
+    validate_skills.py
+    install_skills.py
+    export_lovable.py
+    assert_repository_target.py
+  skills/<name>/SKILL.md
 ```
 
-## Validate
+## Publishing guard
+
+Run before every push or PR:
 
 ```bash
-./scripts/validate-all.sh
+python3 scripts/assert_repository_target.py
+git remote get-url origin
 ```
 
-When adding, removing, or renaming a skill, regenerate the inventory:
-
-```bash
-python3 scripts/build_catalog.py
-```
-
-## Design principles
-
-1. **Operational over aspirational** — schemas, scripts, and examples that actually run  
-2. **Orchestration boundary** — decomposer plans; orchestrator executes; workers implement  
-3. **No permanent model hardcoding** — capability tags + learning store  
-4. **Large corpora stay on disk** — JSONL shards, never one giant chat dump  
-5. **Goal-mode** — attached documents run to completion unless hard-blocked  
-6. **Portable skills** — SKILL.md + assets, no proprietary runtime required  
+The guard accepts GitHub HTTPS or SSH forms only when they resolve to `Masih-0x3/agent-skills`.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
-
-## Authorship notes
-
-- **project-task-decomposer** original design: repository owner; revised/audited for production packaging.  
-- **software-orchestrator**: design + implementation package for multi-model software delivery orchestration.
+Repository tooling is MIT. Vendored skills retain their per-package license and source attribution recorded in the source lock and package files.

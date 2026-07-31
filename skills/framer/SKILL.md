@@ -3,13 +3,6 @@ name: framer
 description: >
   Use when the user wants to design, edit, or publish a website or web page — creating layouts, editing sections, updating text or images, managing CMS collections and content, syncing external data, creating or modifying code components, managing color and text styles, handling localization, or publishing deployments. Trigger when the user mentions Framer, references their website or web pages, asks to edit designs, update site content, or work with any Framer project — even if they don't explicitly say 'Framer'.
   **Mandatory precondition**: run `npx @framer/agent@latest setup` and let it complete **BEFORE** loading this skill.
-allowed-tools:
-  - 'Bash(npx @framer/agent:*)'
-  - 'Bash(npx @framer/agent@latest:*)'
-  - 'Read(/var/folders/ck/xs13v7617m71z8k4mtxh2bz80000gn/T/framer/*)'
-  - 'Write(/var/folders/ck/xs13v7617m71z8k4mtxh2bz80000gn/T/framer/*)'
-  - 'Read(/Users/stevmq/.agents/skills/framer/projects/**)'
-  - 'Read(/Users/stevmq/.agents/skills/framer/start-conversation.md)'
 ---
 
 If you didn't run this command before loading the skill, run it now:
