@@ -8,8 +8,10 @@ import json
 import os
 import shutil
 import tempfile
+import time
 import uuid
 from pathlib import Path
+from typing import Callable, TypeVar
 
 from skilllib import ROOT, SKILLS, SOURCE_LOCK, parse_skill, skill_names
 
@@ -22,6 +24,22 @@ TARGETS = {
     "cursor": lambda: Path.cwd() / ".cursor" / "skills",
     "copilot": lambda: Path.cwd() / ".github" / "skills",
 }
+
+T = TypeVar("T")
+
+
+def retry_transient_lock(operation: Callable[[], T], attempts: int = 8) -> T:
+    """Retry filesystem operations briefly when a Windows scanner holds a handle."""
+    delay = 0.05
+    for attempt in range(attempts):
+        try:
+            return operation()
+        except PermissionError:
+            if attempt == attempts - 1:
+                raise
+            time.sleep(delay)
+            delay = min(delay * 2, 0.5)
+    raise AssertionError("unreachable")
 
 
 def copy_skill(source: Path, destination_root: Path, name: str, dry_run: bool) -> None:
@@ -41,23 +59,26 @@ def copy_skill(source: Path, destination_root: Path, name: str, dry_run: bool) -
             if entry == "__pycache__" or entry.endswith((".pyc", ".pyo", ".db", ".db-journal", ".db-wal", ".db-shm"))
         }
 
+    swapped = False
     try:
         shutil.copytree(source, staging, ignore=ignore)
         if not (staging / "SKILL.md").is_file():
             raise RuntimeError(f"staged package lacks SKILL.md: {name}")
         if destination.exists():
-            destination.rename(backup)
-        staging.rename(destination)
+            retry_transient_lock(lambda: destination.rename(backup))
+        retry_transient_lock(lambda: staging.rename(destination))
+        swapped = True
         if backup.exists():
-            shutil.rmtree(backup)
+            retry_transient_lock(lambda: shutil.rmtree(backup))
     except Exception:
-        if destination.exists() and backup.exists():
-            shutil.rmtree(destination)
-            backup.rename(destination)
-        elif backup.exists() and not destination.exists():
-            backup.rename(destination)
+        if not swapped:
+            if destination.exists() and backup.exists():
+                retry_transient_lock(lambda: shutil.rmtree(destination))
+                retry_transient_lock(lambda: backup.rename(destination))
+            elif backup.exists() and not destination.exists():
+                retry_transient_lock(lambda: backup.rename(destination))
         if staging.exists():
-            shutil.rmtree(staging)
+            retry_transient_lock(lambda: shutil.rmtree(staging))
         raise
 
 
