@@ -30,7 +30,7 @@ def main() -> None:
             "id": skill_dir.name,
             "name": value(frontmatter, "name") or skill_dir.name,
             "description": value(frontmatter, "description") or "",
-            "path": str(skill_dir.relative_to(ROOT)),
+            "path": skill_dir.relative_to(ROOT).as_posix(),
             "file_count": sum(1 for path in skill_dir.rglob("*") if path.is_file()),
         })
     CATALOG.parent.mkdir(exist_ok=True)

@@ -1,16 +1,6 @@
 ---
 name: project-task-decomposer
 description: "Use when converting a PRD, product handoff, spec, architecture brief, roadmap, or implementation plan into a versioned, dependency-aware task corpus (hundreds to thousands of leaf tasks) for a Software Orchestrator. Supports PRD_ONLY, PRD_PLUS_REPO, and CORPUS_UPDATE. Does not implement the product or permanently assign models."
-version: 1.1.0
-author: User design (baseline) + Hermes audit revision
-license: MIT
-metadata:
-  hermes:
-    tags: [planning, decomposition, task-graph, orchestrator, requirements, goal-mode]
-    related_skills: [software-orchestrator, plan, writing-plans, subagent-driven-development]
-  grok:
-    slash: /project-task-decomposer
-    modes: [PRD_ONLY, PRD_PLUS_REPO, CORPUS_UPDATE]
 ---
 
 

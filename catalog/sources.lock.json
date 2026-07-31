@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "agent-skills-baseline",
+      "repository": "https://github.com/Masih-0x3/agent-skills",
+      "commit": "d56ec4b2b00e20b739c38a6942d46c69eb0d402b",
+      "path_template": "skills/{name}",
+      "license": "MIT",
+      "include": "*",
+      "path_overrides": {
+        "diffui-designer": "skills/diffui"
+      }
+    },
+    {
+      "id": "openai-skills",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "per-package",
+      "skills": {
+        "playwright": "skills/.curated/playwright",
+        "sentry": "skills/.curated/sentry"
+      }
+    },
+    {
+      "id": "supabase-agent-skills",
+      "repository": "https://github.com/supabase/agent-skills",
+      "commit": "1207767388a0ffb55f21fb4e6988fee96942431d",
+      "license": "MIT",
+      "skills": {
+        "supabase": "skills/supabase",
+        "supabase-postgres-best-practices": "skills/supabase-postgres-best-practices"
+      }
+    }
+  ],
+  "normalizations": {
+    "apk-reverse": [
+      "Removed debug.keystore because portable skills must not distribute private-key material."
+    ],
+    "diffui-designer": [
+      "Renamed the directory from diffui so the directory matches the declared skill name."
+    ],
+    "hindsight-docs": [
+      "Replaced conventional AWS example credentials with explicit non-credential placeholders."
+    ],
+    "project-task-decomposer": [
+      "Moved version, author, license, host tags, and invocation data out of portable SKILL.md frontmatter."
+    ],
+    "redesign-existing-projects": [
+      "Moved host-specific invocation and upstream fields out of portable SKILL.md frontmatter."
+    ],
+    "reverse-engineering": [
+      "Replaced a Markdown anchor resembling a secret prefix with an equivalent explicit anchor."
+    ],
+    "software-orchestrator": [
+      "Moved version, author, license, host tags, and invocation data out of portable SKILL.md frontmatter."
+    ],
+    "supabase": [
+      "Moved author and version data out of portable SKILL.md frontmatter."
+    ],
+    "supabase-postgres-best-practices": [
+      "Moved license, author, version, organization, date, and abstract out of portable SKILL.md frontmatter."
+    ]
+  },
+  "compatibility": {
+    "cloudflare": {
+      "installable": true,
+      "lovable_compatible": false,
+      "reason": "Package contains more than Lovable's 200-file per-skill limit."
+    },
+    "pentest-tools": {
+      "installable": false,
+      "lovable_compatible": false,
+      "review_status": "blocked",
+      "reason": "One file exceeds Lovable's 1 MB limit and Windows Defender blocks a bundled Markdown reference pending security review."
+    }
+  }
+}

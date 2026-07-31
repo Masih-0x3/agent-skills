@@ -1,17 +1,6 @@
 ---
 name: software-orchestrator
 description: "Use when invoking Software Orchestrator as a /goal-style run with an attached plan/PRD/doc until every in-scope item is verified. Includes cold-start priors for host models (Cline-pass, Antigravity, Kilo free): strengths, thinking levels, specialty routing. Grok orchestrates; workers execute; live outcomes update the capability store."
-version: 0.3.0
-author: Hermes / Grok Software Orchestrator
-license: MIT
-metadata:
-  hermes:
-    tags: [orchestration, multi-agent, routing, code-review, worktrees, learning, goal-mode]
-    related_skills: [plan, writing-plans, subagent-driven-development, requesting-code-review, test-driven-development, systematic-debugging]
-  grok:
-    slash: /software-orchestrator
-    invocation: "Invoke the Software Orchestrator skill for this project."
-    goal_invocation: "/goal + software-orchestrator with attached document"
 ---
 
 # Software Orchestrator
