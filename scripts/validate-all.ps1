@@ -30,6 +30,7 @@ function Invoke-Python {
 try {
     Invoke-Python "$RepoRoot\scripts\validate_skills.py"
     Invoke-Python "$RepoRoot\scripts\build_catalog.py" '--check'
+    Invoke-Python '-m' 'unittest' 'discover' '-s' "$RepoRoot\scripts" '-p' 'test_*.py'
     $Orch = "$RepoRoot\skills\software-orchestrator"
     Invoke-Python '-m' 'py_compile' "$Orch\scripts\initialize_store.py" "$Orch\scripts\seed_model_priors.py" "$Orch\scripts\select_model.py" "$Orch\scripts\record_outcome.py"
     Invoke-Python "$Orch\scripts\initialize_store.py" '--path' "$TempRoot\orchestrator.db"

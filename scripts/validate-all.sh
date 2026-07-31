@@ -8,6 +8,7 @@ trap 'rm -rf "$TMP_ROOT"' EXIT
 
 "$PY" "$ROOT/scripts/validate_skills.py"
 "$PY" "$ROOT/scripts/build_catalog.py" --check
+"$PY" -m unittest discover -s "$ROOT/scripts" -p 'test_*.py'
 
 ORCH="$ROOT/skills/software-orchestrator"
 "$PY" -m py_compile \
