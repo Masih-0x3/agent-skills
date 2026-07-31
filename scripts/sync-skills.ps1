@@ -1,37 +1,30 @@
 [CmdletBinding()]
 param(
-    [ValidateSet('Agents', 'Codex', 'Both')]
-    [string]$Target = 'Both'
+    [ValidateSet('Agents', 'Codex', 'Both', 'All', 'Claude', 'Grok', 'Hermes', 'Cursor', 'Copilot', 'Custom')]
+    [string]$Target = 'Both',
+    [string]$Destination,
+    [switch]$DryRun
 )
 
 $ErrorActionPreference = 'Stop'
-$RepoRoot = Split-Path -Parent $PSScriptRoot
-$SourceRoot = Join-Path $RepoRoot 'skills'
-
-if (-not (Test-Path -LiteralPath $SourceRoot -PathType Container)) {
-    throw "Could not find skills directory: $SourceRoot"
+$Installer = Join-Path $PSScriptRoot 'install_skills.py'
+$ConfiguredPython = $env:PYTHON
+$Py = Get-Command py -ErrorAction SilentlyContinue
+$Python = Get-Command python -ErrorAction SilentlyContinue
+if ($ConfiguredPython) {
+    $Executable = $ConfiguredPython
+    $Arguments = @($Installer, '--target', $Target.ToLowerInvariant())
+} elseif ($Py) {
+    $Executable = $Py.Source
+    $Arguments = @('-3', $Installer, '--target', $Target.ToLowerInvariant())
+} elseif ($Python) {
+    $Executable = $Python.Source
+    $Arguments = @($Installer, '--target', $Target.ToLowerInvariant())
+} else {
+    throw 'Python 3 is required.'
 }
-
-function Sync-SkillRoot {
-    param([Parameter(Mandatory = $true)][string]$Destination)
-
-    New-Item -ItemType Directory -Force -Path $Destination | Out-Null
-    $packages = Get-ChildItem -LiteralPath $SourceRoot -Directory
-    $skills = $packages |
-        Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName 'SKILL.md') -PathType Leaf }
-
-    foreach ($package in $packages) {
-        Copy-Item -LiteralPath $package.FullName -Destination (Join-Path $Destination $package.Name) -Recurse -Force
-    }
-
-    Write-Host "Synced $($skills.Count) skills -> $Destination"
-}
-
-if ($Target -in @('Agents', 'Both')) {
-    Sync-SkillRoot (Join-Path $HOME '.agents\skills')
-}
-if ($Target -in @('Codex', 'Both')) {
-    Sync-SkillRoot (Join-Path $HOME '.codex\skills')
-}
-
-Write-Host 'Restart Codex or start a new session to refresh its skill inventory.'
+if ($Destination) { $Arguments += @('--destination', $Destination) }
+if ($DryRun) { $Arguments += '--dry-run' }
+& $Executable @Arguments
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+Write-Host 'Restart the coding tool or open a new session to refresh skill discovery.'

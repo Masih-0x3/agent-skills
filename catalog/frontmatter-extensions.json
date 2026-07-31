@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "description": "Host-specific fields removed from portable SKILL.md frontmatter.",
+  "skills": {
+    "ab-testing": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "ad-creative": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "ads": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "agent-reach": {
+      "metadata": "metadata:\n  triggers:\n    - research: 调研/全网调研/帮我调研/研究一下/research/深入了解\n    - search: 搜/查/找/search/搜索/查一下/帮我搜/看看大家怎么说\n    - social:\n      - 小红书: xiaohongshu/xhs/小红书/红书\n      - Twitter: twitter/推特/x.com/推文\n      - B站: bilibili/b站/哔哩哔哩\n      - V2EX: v2ex\n      - Reddit: reddit\n      - Facebook: facebook/fb/facebook groups\n      - Instagram: instagram/ig\n    - career: 招聘/职位/求职/linkedin/领英/找工作\n    - dev: github/代码/仓库/gh/issue/pr/分支/commit\n    - web: 网页/链接/文章/rss/读一下/打开这个\n    - video: youtube/视频/播客/字幕/小宇宙/转录/yt\n    - finance: 雪球/股票/stock/xueqiu/行情/基金\n  openclaw:\n    homepage: https://github.com/Panniantong/Agent-Reach"
+    },
+    "ai-seo": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "analytics": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "aso": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "churn-prevention": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "cloudflare": {
+      "metadata": "metadata:\n  references:\n    - workers\n    - pages\n    - d1\n    - durable-objects\n    - workers-ai"
+    },
+    "co-marketing": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "codex-conductor": {
+      "metadata": "metadata:\n  disable-model-invocation: true"
+    },
+    "cold-email": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "community-marketing": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "competitor-profiling": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "competitors": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "content-strategy": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "copy-editing": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "copywriting": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "cro": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "customer-research": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "directory-submissions": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "emails": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "framer": {
+      "allowed-tools": "allowed-tools:\n  - 'Bash(npx @framer/agent:*)'\n  - 'Bash(npx @framer/agent@latest:*)'\n  - 'Read(/var/folders/ck/xs13v7617m71z8k4mtxh2bz80000gn/T/framer/*)'\n  - 'Write(/var/folders/ck/xs13v7617m71z8k4mtxh2bz80000gn/T/framer/*)'\n  - 'Read(/Users/stevmq/.agents/skills/framer/projects/**)'\n  - 'Read(/Users/stevmq/.agents/skills/framer/start-conversation.md)'"
+    },
+    "free-tools": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "image": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "launch": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "lead-magnets": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "marketing-ideas": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "marketing-psychology": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "onboarding": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "paywalls": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "popups": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "pricing": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "product-marketing": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "programmatic-seo": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "referrals": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "reverse-engineering": {
+      "license": "license: MIT",
+      "allowed-tools": "allowed-tools: Bash Read Write Edit Glob Grep Task WebFetch WebSearch",
+      "metadata": "metadata:\n  user-invocable: 'false'\n  compatibility: Requires a filesystem-based code agent or CLI with shell access, Python 3, and internet access for tool installation."
+    },
+    "review-animations": {
+      "metadata": "metadata:\n  disable-model-invocation: true"
+    },
+    "revops": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "sales-enablement": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "schema": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "sentry-cli": {
+      "metadata": "metadata:\n  version: 0.37.0\n  requires:\n    bins: [\"sentry\"]\n    auth: true"
+    },
+    "seo-audit": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "shadcn": {
+      "allowed-tools": "allowed-tools: Bash(npx shadcn@latest *), Bash(pnpm dlx shadcn@latest *), Bash(bunx --bun shadcn@latest *)",
+      "metadata": "metadata:\n  user-invocable: \"false\""
+    },
+    "signup": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "site-architecture": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "social": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "steel-browser": {
+      "allowed-tools": "allowed-tools:\n  - \"Bash(steel:*)\"",
+      "license": "license: MIT",
+      "metadata": "metadata:\n  compatibility: claude-code,codex,cursor,opencode,pi\n  owner: steel\n  category: operate\n  stage: ga"
+    },
+    "steel-developer": {
+      "license": "license: MIT",
+      "metadata": "metadata:\n  compatibility: claude-code,codex,cursor,opencode,pi\n  owner: steel\n  category: build\n  stage: ga"
+    },
+    "steel-reliability": {
+      "license": "license: MIT",
+      "metadata": "metadata:\n  compatibility: claude-code,codex,cursor,opencode,pi\n  owner: steel\n  category: reliability\n  stage: beta"
+    },
+    "steel-session-debugging": {
+      "license": "license: MIT",
+      "metadata": "metadata:\n  compatibility: claude-code,codex,cursor,opencode,pi\n  owner: steel\n  category: debug\n  stage: beta"
+    },
+    "steel-skill-creator": {
+      "license": "license: MIT",
+      "metadata": "metadata:\n  compatibility: claude-code,codex,cursor,opencode,pi\n  owner: steel\n  category: create\n  stage: beta"
+    },
+    "video": {
+      "metadata": "metadata:\n  version: 2.0.0"
+    },
+    "project-task-decomposer": {
+      "license": "license: MIT",
+      "metadata": "metadata:\n  version: \"1.1.0\"\n  author: User design (baseline) + Hermes audit revision\n  hermes:\n    tags: [planning, decomposition, task-graph, orchestrator, requirements, goal-mode]\n    related_skills: [software-orchestrator, plan, writing-plans, subagent-driven-development]\n  grok:\n    slash: /project-task-decomposer\n    modes: [PRD_ONLY, PRD_PLUS_REPO, CORPUS_UPDATE]"
+    },
+    "redesign-existing-projects": {
+      "metadata": "metadata:\n  invocation: manual-preferred\n  upstream: https://github.com/elayadesign/redesign-skill\n  upstream_ref: main\n  upstream_commit: 64627f6ebe7a7a2f17c0affe4fe5838e2d46a876\n  upstream_path: skills/redesign-existing-projects/SKILL.md\n  upstream_sha256: 8ed4b9f5301edec67e87138322fe627fe0b1172aca4d73db8c23ed3ff1379b0d"
+    },
+    "software-orchestrator": {
+      "license": "license: MIT",
+      "metadata": "metadata:\n  version: \"0.3.0\"\n  author: Hermes / Grok Software Orchestrator\n  hermes:\n    tags: [orchestration, multi-agent, routing, code-review, worktrees, learning, goal-mode]\n    related_skills: [plan, writing-plans, subagent-driven-development, requesting-code-review, test-driven-development, systematic-debugging]\n  grok:\n    slash: /software-orchestrator\n    invocation: \"Invoke the Software Orchestrator skill for this project.\"\n    goal_invocation: \"/goal + software-orchestrator with attached document\""
+    },
+    "supabase": {
+      "metadata": "metadata:\n  author: supabase\n  version: \"0.1.2\""
+    },
+    "supabase-postgres-best-practices": {
+      "license": "license: MIT",
+      "metadata": "metadata:\n  author: supabase\n  version: \"1.1.1\"\n  organization: Supabase\n  date: January 2026\n  abstract: Comprehensive Postgres performance optimization guide for developers using Supabase and Postgres."
+    }
+  }
+}

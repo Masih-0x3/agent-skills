@@ -1,12 +1,6 @@
 ---
 name: steel-skill-creator
 description: Use this skill when the user wants to turn a recurring browser workflow into a reusable, parameterized agent skill, especially when the task has concrete inputs and a clear output such as scheduled scrapes, form submissions, data extraction, monitoring flows, price probes, or login-gated reports. Do not use for one-off web tasks; use steel-browser.
-license: MIT
-metadata:
-  compatibility: claude-code,codex,cursor,opencode,pi
-  owner: steel
-  category: create
-  stage: beta
 ---
 
 # Steel Skill Creator

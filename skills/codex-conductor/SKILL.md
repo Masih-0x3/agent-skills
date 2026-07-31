@@ -1,8 +1,6 @@
 ---
 name: codex-conductor
 description: Manual opt-in Codex conductor for Fugu-style model routing and worker review.
-metadata:
-  disable-model-invocation: true
 ---
 
 # Codex Conductor
