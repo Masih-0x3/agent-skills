@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "algorithm": "sha256",
-  "skill_count": 155,
+  "skill_count": 158,
   "skills": [
     {
       "name": "ab-testing",
@@ -240,12 +240,12 @@
     },
     {
       "name": "ai-seo",
-      "tree_sha256": "0fa2a7a9244651e0d796eefb4b23eb44949a4c886741092032e44c23d9bd09be",
+      "tree_sha256": "492df90603ecd3172029b4e76488dafc88f056b57cd09965c4bf9f01689ee237",
       "files": [
         {
           "path": "SKILL.md",
-          "sha256": "6c4840de3efb974fbbe7452f0e1bc4ab89433d599abd811586f4670d6d2b8565",
-          "bytes": 19623
+          "sha256": "fd5f4e21618b458f5f263ba296e8131858d3f2732e187a84362eb44fa694c402",
+          "bytes": 19736
         },
         {
           "path": "evals/evals.json",
@@ -380,6 +380,22 @@
           "path": "SKILL.md",
           "sha256": "11840b24a11d7f94f39c6aaab074750ae4e4de4ef54ee4b1dd97e16ebd485e61",
           "bytes": 22715
+        }
+      ]
+    },
+    {
+      "name": "ask-sonner",
+      "tree_sha256": "0876a2a35927b5a059eb35bfc8ff3eca465c194b6baf99e9179855846b603429",
+      "files": [
+        {
+          "path": "API.md",
+          "sha256": "9f21fbb417033178cf585f035dc57ff6bb8893d822fdebd9a822fd79262af8d4",
+          "bytes": 4539
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "0d9b4b133c4cfd6d0aa53df3e3e9e964e45d547187d6a07004ef208ea03c9be1",
+          "bytes": 6720
         }
       ]
     },
@@ -2647,7 +2663,7 @@
     },
     {
       "name": "content-strategy",
-      "tree_sha256": "8ab1a13ef9a10ca6ceae13f8d9b700636fc8492651aa925432fa68d39182e69a",
+      "tree_sha256": "aa1325746c2c7ce2da7eea6d4501bafed7a340c763e08c0f3c438857fe2beaa6",
       "files": [
         {
           "path": "SKILL.md",
@@ -2661,8 +2677,8 @@
         },
         {
           "path": "references/headless-cms.md",
-          "sha256": "c0a7b87f47c8f7af907ce73facf1ed4721ade811e53f86ddf22f4bc0d7ca324e",
-          "bytes": 8433
+          "sha256": "e2a60f986d3640b90c30dc10ffeb224d1a3713b465c9359765a729ab0b1b9de2",
+          "bytes": 8442
         }
       ]
     },
@@ -3066,6 +3082,17 @@
           "path": "references/workflow.md",
           "sha256": "2361195ede7301b1e65c14e3ec133021798ebf6d6e570e731097f20ebcf62950",
           "bytes": 629
+        }
+      ]
+    },
+    {
+      "name": "find-animation-opportunities",
+      "tree_sha256": "5a5f296489e2fb10e473f42ce7645986bf867cda5ef9098d5bc350876e86d407",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "d7e15d2a50b27ff7777c182a3c49009867c1e62cacb620efb505e81f01e8678d",
+          "bytes": 9158
         }
       ]
     },
@@ -4749,6 +4776,17 @@
           "path": "templates/task_plan.md",
           "sha256": "0d8eb4de9040534f3be9a39f37d7915d627bc2dc17f243402dbd9803fb8303d3",
           "bytes": 543
+        }
+      ]
+    },
+    {
+      "name": "pick-ui-library",
+      "tree_sha256": "871c65a41ed146a28fdb4fcb41fb4e45312a76bbf74d196f4a62988033b81fde",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "6ce1a0854d8cc9dcc12f02fbbaccd1d53c0f221307e33859dda76a0483119d7b",
+          "bytes": 4379
         }
       ]
     },
@@ -7043,7 +7081,7 @@
     },
     {
       "name": "transitions-dev",
-      "tree_sha256": "e55bc69dd1e34df78dd9a787d13677381ff87bc88ff074a364ab549a8f81f448",
+      "tree_sha256": "4dedc70088a8b5a348a72394a867cbf5799845d3f8a23f97ed751de1f53bd341",
       "files": [
         {
           "path": "01-card-resize.md",
@@ -7152,13 +7190,13 @@
         },
         {
           "path": "SKILL.md",
-          "sha256": "6b8abcc38d5f040e4ce782dfb68cf9de201e99a9944ed8223c60e990b1f177fd",
-          "bytes": 16032
+          "sha256": "1a5767fd9aaeb0a88315f205ba76526f0f67a61eeb8b2ff15976f19696c60d37",
+          "bytes": 15521
         },
         {
           "path": "_root.css",
-          "sha256": "cc075b4b2ebf82b60ef9d0817045d33c3f75fc1af6016e24a7ce0a2f000e70c0",
-          "bytes": 5328
+          "sha256": "72da8efbb0017832e5cbc2bcb8f7cd7ef048ebcac2355f72b0d274c1f96a3198",
+          "bytes": 5134
         }
       ]
     },

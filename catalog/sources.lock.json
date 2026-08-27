@@ -13,6 +13,17 @@
       }
     },
     {
+      "id": "emil-kowalski-skills",
+      "repository": "https://github.com/emilkowalski/skills.git",
+      "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+      "license": "MIT",
+      "skills": {
+        "ask-sonner": "skills/ask-sonner",
+        "find-animation-opportunities": "skills/find-animation-opportunities",
+        "pick-ui-library": "skills/pick-ui-library"
+      }
+    },
+    {
       "id": "openai-skills",
       "repository": "https://github.com/openai/skills",
       "commit": "49f948faa9258a0c61caceaf225e179651397431",
@@ -60,6 +71,26 @@
     ],
     "supabase-postgres-best-practices": [
       "Moved license, author, version, organization, date, and abstract out of portable SKILL.md frontmatter."
+    ],
+    "ask-sonner": [
+      "Normalized the trigger-first description for portable host import.",
+      "Updated the Sonner active-toast API guidance to toast.getToasts()."
+    ],
+    "find-animation-opportunities": [
+      "Normalized the trigger-first description for portable host import.",
+      "Removed handoffs to unavailable sibling animation workflows."
+    ],
+    "pick-ui-library": [
+      "Normalized the trigger-first description and removed unsupported host-only frontmatter."
+    ],
+    "ai-seo": [
+      "Replaced a repository-relative tools registry link with self-contained integration guidance."
+    ],
+    "content-strategy": [
+      "Replaced repository-relative integration links with self-contained provider-neutral guidance."
+    ],
+    "transitions-dev": [
+      "Removed optional sibling workflow references from SKILL.md and _root.css so the package is self-contained."
     ]
   },
   "compatibility": {

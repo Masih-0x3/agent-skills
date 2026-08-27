@@ -1,6 +1,6 @@
 # Agent Skills
 
-Private, canonical source of truth for 155 portable agent skills used across Codex, Agents-compatible tools, and other coding assistants.
+Private, canonical source of truth for 158 portable agent skills used across Codex, Agents-compatible tools, and other coding assistants.
 
 Each package lives at `skills/<name>/` and has a `SKILL.md` whose only frontmatter fields are `name` and `description`. Source provenance, host-specific extensions, compatibility, and integrity hashes live in `catalog/`.
 
@@ -64,13 +64,23 @@ See [`docs/install.md`](docs/install.md) for platform-specific examples.
 
 ## Lovable ZIP import
 
-The repository remains private, so use deterministic per-skill ZIP upload rather than a public GitHub URL:
+The repository remains private. Lovable cannot import a private GitHub URL, so use deterministic per-skill ZIP upload:
 
 ```powershell
-py -3 .\scripts\export_lovable.py playwright --output .\dist\lovable --check
+py -3 .\scripts\export_lovable.py --profile general-use --output .\dist\lovable --check
 ```
 
-Each ZIP contains one wrapping skill directory. A sidecar manifest records every file hash and the package tree digest. Export fails closed when a package is blocked or exceeds Lovable's documented file-count, file-size, total-size, or `SKILL.md` size limits.
+```bash
+python3 scripts/export_lovable.py --profile general-use --output dist/lovable --check
+```
+
+Open `dist/lovable/index.json` to see the deterministic list, descriptions, ZIP names, file counts, and tree hashes. In Lovable, open the target project and go to `Settings -> Skills -> Add -> Upload ZIP`. Upload one individual `<skill>.zip` at a time and confirm the skill is enabled. Keep each ZIP's wrapping directory. Do not upload `index.json` or the sidecar manifests as skills; they are for local verification only.
+
+For the GitHub Actions path, open the successful `validate-skills` workflow run, download its `lovable-general-use` artifact, unzip that bundle locally, and upload each individual skill ZIP through `Settings -> Skills -> Add -> Upload ZIP`.
+
+The intentional `general-use` profile contains exactly 28 self-contained product, frontend, design, content, QA, and code-quality skills that can work from project code and chat. It excludes Computer Use and browser/operator tools, Orca/Paseo/provider routing, MCP/CLI-dependent packages, cloud administration, remote sandboxes, security offense/reverse engineering, private project workflows, publishing, and required live research. `pentest-tools` is always excluded and remains protected from export.
+
+Explicit export remains available for a single compatible package, for example `python3 scripts/export_lovable.py playwright --output dist/lovable --check`. Selection behavior for default and explicit exports is preserved; the exporter additionally writes `index.json` with the selected ZIP names and hashes.
 
 `cloudflare` remains in the canonical library but exceeds Lovable's 200-file limit. `pentest-tools` remains tracked but is blocked from default installation and export pending review of a Windows Defender-triggered reference.
 

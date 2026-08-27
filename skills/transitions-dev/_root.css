@@ -1,9 +1,6 @@
 /* transitions-dev — copy this :root block into your project once.
    Every transition snippet reads from these semantic names. Snippets
-   ship literal values so they work on their own; to tune them against
-   a shared motion-token scale, install the companion transitions-polish
-   skill (its _root.css adds the --duration-*/--ease-*/--distance-*/
-   --scale-*/--blur-* tokens). */
+   ship literal values so they work on their own. */
 :root {
   /* Card resize */
   --resize-dur: 300ms;

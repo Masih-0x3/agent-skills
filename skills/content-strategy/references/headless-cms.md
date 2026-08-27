@@ -187,8 +187,6 @@ Pull CMS content into email templates for consistent messaging across web and em
 
 ---
 
-## Relevant Integration Guides
+## Provider-neutral integration note
 
-- [Sanity](../../../tools/integrations/sanity.md) — GROQ queries, mutations, CLI
-- [Contentful](../../../tools/integrations/contentful.md) — Delivery/Management APIs, publishing
-- [Strapi](../../../tools/integrations/strapi.md) — REST CRUD, filters, document API
+These references are intentionally self-contained. If the project already uses a headless CMS such as Sanity, Contentful, or Strapi, follow that provider's own documented API and draft/publish workflow; otherwise keep the content model and delivery plan provider-neutral.
