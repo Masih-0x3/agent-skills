@@ -409,7 +409,7 @@ Monthly manual check:
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md).
+Tool integrations are optional. Use analytics, search-console, or SEO data that the project already provides, and keep recommendations provider-neutral when no such data is available.
 
 | Tool | Use For |
 |------|---------|

@@ -12,7 +12,7 @@
       "max_skill_characters": 100000
     }
   },
-  "skill_count": 155,
+  "skill_count": 158,
   "skills": [
     {
       "id": "ab-testing",
@@ -196,18 +196,19 @@
         "license": "MIT"
       },
       "normalizations": [
+        "Replaced a repository-relative tools registry link with self-contained integration guidance.",
         "Moved non-portable top-level frontmatter fields into catalog/frontmatter-extensions.json."
       ],
       "review": {
-        "status": "unreviewed",
+        "status": "reviewed",
         "has_executable_content": false
       },
       "integrity": {
         "algorithm": "sha256",
-        "tree_sha256": "0fa2a7a9244651e0d796eefb4b23eb44949a4c886741092032e44c23d9bd09be",
+        "tree_sha256": "492df90603ecd3172029b4e76488dafc88f056b57cd09965c4bf9f01689ee237",
         "file_count": 4,
-        "total_bytes": 46783,
-        "largest_file_bytes": 19623
+        "total_bytes": 46896,
+        "largest_file_bytes": 19736
       },
       "compatibility": {
         "agent_skills": true,
@@ -340,6 +341,41 @@
         "file_count": 1,
         "total_bytes": 22715,
         "largest_file_bytes": 22715
+      },
+      "compatibility": {
+        "agent_skills": true,
+        "installable": true,
+        "lovable": true,
+        "reason": ""
+      }
+    },
+    {
+      "id": "ask-sonner",
+      "name": "ask-sonner",
+      "description": "Use when working with Sonner or troubleshooting React toasts, including Toaster setup, toast variants, promise/loading flows, dismissal, styling, theming, positioning, duplicate toasts, stacking, or dark mode.",
+      "path": "skills/ask-sonner",
+      "entrypoint": "skills/ask-sonner/SKILL.md",
+      "source": {
+        "id": "emil-kowalski-skills",
+        "repository": "https://github.com/emilkowalski/skills.git",
+        "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+        "path": "skills/ask-sonner",
+        "license": "MIT"
+      },
+      "normalizations": [
+        "Normalized the trigger-first description for portable host import.",
+        "Updated the Sonner active-toast API guidance to toast.getToasts()."
+      ],
+      "review": {
+        "status": "reviewed",
+        "has_executable_content": false
+      },
+      "integrity": {
+        "algorithm": "sha256",
+        "tree_sha256": "0876a2a35927b5a059eb35bfc8ff3eca465c194b6baf99e9179855846b603429",
+        "file_count": 2,
+        "total_bytes": 11259,
+        "largest_file_bytes": 6720
       },
       "compatibility": {
         "agent_skills": true,
@@ -1244,17 +1280,18 @@
         "license": "MIT"
       },
       "normalizations": [
+        "Replaced repository-relative integration links with self-contained provider-neutral guidance.",
         "Moved non-portable top-level frontmatter fields into catalog/frontmatter-extensions.json."
       ],
       "review": {
-        "status": "unreviewed",
+        "status": "reviewed",
         "has_executable_content": false
       },
       "integrity": {
         "algorithm": "sha256",
-        "tree_sha256": "8ab1a13ef9a10ca6ceae13f8d9b700636fc8492651aa925432fa68d39182e69a",
+        "tree_sha256": "aa1325746c2c7ce2da7eea6d4501bafed7a340c763e08c0f3c438857fe2beaa6",
         "file_count": 3,
-        "total_bytes": 27206,
+        "total_bytes": 27215,
         "largest_file_bytes": 12245
       },
       "compatibility": {
@@ -1846,6 +1883,41 @@
         "file_count": 3,
         "total_bytes": 3187,
         "largest_file_bytes": 2056
+      },
+      "compatibility": {
+        "agent_skills": true,
+        "installable": true,
+        "lovable": true,
+        "reason": ""
+      }
+    },
+    {
+      "id": "find-animation-opportunities",
+      "name": "find-animation-opportunities",
+      "description": "Use when the user asks what could be animated or wants an interface to feel more alive; inspect code, reject unnecessary motion, and report precise read-only suggestions without implementing them.",
+      "path": "skills/find-animation-opportunities",
+      "entrypoint": "skills/find-animation-opportunities/SKILL.md",
+      "source": {
+        "id": "emil-kowalski-skills",
+        "repository": "https://github.com/emilkowalski/skills.git",
+        "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+        "path": "skills/find-animation-opportunities",
+        "license": "MIT"
+      },
+      "normalizations": [
+        "Normalized the trigger-first description for portable host import.",
+        "Removed handoffs to unavailable sibling animation workflows."
+      ],
+      "review": {
+        "status": "reviewed",
+        "has_executable_content": false
+      },
+      "integrity": {
+        "algorithm": "sha256",
+        "tree_sha256": "5a5f296489e2fb10e473f42ce7645986bf867cda5ef9098d5bc350876e86d407",
+        "file_count": 1,
+        "total_bytes": 9158,
+        "largest_file_bytes": 9158
       },
       "compatibility": {
         "agent_skills": true,
@@ -3088,6 +3160,40 @@
         "installable": false,
         "lovable": false,
         "reason": "One file exceeds Lovable's 1 MB limit and Windows Defender blocks a bundled Markdown reference pending security review."
+      }
+    },
+    {
+      "id": "pick-ui-library",
+      "name": "pick-ui-library",
+      "description": "Use when the user asks which frontend library or package to choose for UI components, motion, charts, interaction, state, styling, or related infrastructure.",
+      "path": "skills/pick-ui-library",
+      "entrypoint": "skills/pick-ui-library/SKILL.md",
+      "source": {
+        "id": "emil-kowalski-skills",
+        "repository": "https://github.com/emilkowalski/skills.git",
+        "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+        "path": "skills/pick-ui-library",
+        "license": "MIT"
+      },
+      "normalizations": [
+        "Normalized the trigger-first description and removed unsupported host-only frontmatter."
+      ],
+      "review": {
+        "status": "reviewed",
+        "has_executable_content": false
+      },
+      "integrity": {
+        "algorithm": "sha256",
+        "tree_sha256": "871c65a41ed146a28fdb4fcb41fb4e45312a76bbf74d196f4a62988033b81fde",
+        "file_count": 1,
+        "total_bytes": 4379,
+        "largest_file_bytes": 4379
+      },
+      "compatibility": {
+        "agent_skills": true,
+        "installable": true,
+        "lovable": true,
+        "reason": ""
       }
     },
     {
@@ -4719,7 +4825,7 @@
     {
       "id": "transitions-dev",
       "name": "transitions-dev",
-      "description": "Production-ready CSS transitions for web apps. Use when implementing or replacing motion for badges, dropdowns, modals, panels, page changes, resizing cards, number or text swaps, icon swaps, success and error states, hover effects, search clearing, skeletons, shimmer, tabs, tooltips, staggered reveals, 3D tilt, menu morphs, accordions, or expand and collapse behavior. Also use for the transitions reveal and transitions apply commands. For auditing existing motion against motion tokens, reviewing animations, or tuning durations, use transitions-polish instead.",
+      "description": "Use when implementing or replacing CSS transitions for badges, dropdowns, modals, panels, page changes, resizing cards, number or text swaps, icon swaps, success and error states, hover effects, search clearing, skeletons, shimmer, tabs, tooltips, staggered reveals, 3D tilt, menu morphs, accordions, or expand and collapse behavior.",
       "path": "skills/transitions-dev",
       "entrypoint": "skills/transitions-dev/SKILL.md",
       "source": {
@@ -4729,17 +4835,19 @@
         "path": "skills/transitions-dev",
         "license": "MIT"
       },
-      "normalizations": [],
+      "normalizations": [
+        "Removed optional sibling workflow references from SKILL.md and _root.css so the package is self-contained."
+      ],
       "review": {
-        "status": "unreviewed",
+        "status": "reviewed",
         "has_executable_content": false
       },
       "integrity": {
         "algorithm": "sha256",
-        "tree_sha256": "e55bc69dd1e34df78dd9a787d13677381ff87bc88ff074a364ab549a8f81f448",
+        "tree_sha256": "4dedc70088a8b5a348a72394a867cbf5799845d3f8a23f97ed751de1f53bd341",
         "file_count": 23,
-        "total_bytes": 120985,
-        "largest_file_bytes": 16032
+        "total_bytes": 120280,
+        "largest_file_bytes": 15521
       },
       "compatibility": {
         "agent_skills": true,

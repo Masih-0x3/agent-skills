@@ -17,3 +17,11 @@ jobs:
         run: pip install jsonschema
       - name: Validate all skills
         run: ./scripts/validate-all.sh
+      - name: Build curated Lovable export
+        run: python3 scripts/export_lovable.py --profile general-use --output dist/lovable --check
+      - name: Upload curated Lovable export
+        uses: actions/upload-artifact@v4
+        with:
+          name: lovable-general-use
+          path: dist/lovable
+          if-no-files-found: error

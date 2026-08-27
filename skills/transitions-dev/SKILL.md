@@ -1,6 +1,6 @@
 ---
 name: transitions-dev
-description: Production-ready CSS transitions for web apps. Use when implementing or replacing motion for badges, dropdowns, modals, panels, page changes, resizing cards, number or text swaps, icon swaps, success and error states, hover effects, search clearing, skeletons, shimmer, tabs, tooltips, staggered reveals, 3D tilt, menu morphs, accordions, or expand and collapse behavior. Also use for the transitions reveal and transitions apply commands. For auditing existing motion against motion tokens, reviewing animations, or tuning durations, use transitions-polish instead.
+description: Use when implementing or replacing CSS transitions for badges, dropdowns, modals, panels, page changes, resizing cards, number or text swaps, icon swaps, success and error states, hover effects, search clearing, skeletons, shimmer, tabs, tooltips, staggered reveals, 3D tilt, menu morphs, accordions, or expand and collapse behavior.
 ---
 
 # Transitions.dev
@@ -63,7 +63,7 @@ If two transitions could fit, prefer the lower-overhead one (card resize over pa
 
 ## Commands
 
-The skill exposes two namespaced verbs the agent should recognise in addition to direct transition requests. Every command starts with `transitions` so the invocation never collides with verbs from other skills installed in the same project. (For auditing or applying motion-token polish on transitions that already exist, the companion **transitions-polish** skill provides `transitions review` and `transitions polish`.)
+The skill exposes two namespaced verbs the agent should recognise in addition to direct transition requests. Every command starts with `transitions` so the invocation never collides with verbs from other skills installed in the same project.
 
 ### transitions reveal — list every transition
 
@@ -85,7 +85,7 @@ The skill exposes two namespaced verbs the agent should recognise in addition to
 
 ## Universal install
 
-Copy [`_root.css`](./_root.css) into your project **once** and import it (or paste its `:root` block into your global stylesheet). It holds the semantic tunable variables for **all twenty-one** transitions. Every snippet reads from these names — `--resize-*`, `--badge-*`, `--dropdown-*`, `--clear-*`, `--shimmer-*`, `--tabs-*`, `--tt-*`, `--stagger-*`, `--tilt-*`, `--morph-*`, `--acc-*`, and the rest. The snippets ship literal values, so they work on their own; to tune them against a shared motion-token scale, install the companion **transitions-polish** skill.
+Copy [`_root.css`](./_root.css) into your project **once** and import it (or paste its `:root` block into your global stylesheet). It holds the semantic tunable variables for **all twenty-one** transitions. Every snippet reads from these names — `--resize-*`, `--badge-*`, `--dropdown-*`, `--clear-*`, `--shimmer-*`, `--tabs-*`, `--tt-*`, `--stagger-*`, `--tilt-*`, `--morph-*`, `--acc-*`, and the rest. The snippets also ship literal values, so they work on their own.
 
 Each reference file also restates just the variables that snippet needs, so you can install a single transition without pulling the whole block. Don't duplicate the block — if `_root.css` is already imported, skip re-pasting any per-snippet `:root`.
 

@@ -47,13 +47,25 @@ Compatibility policy is stored in `catalog/sources.lock.json`. `pentest-tools` i
 
 ## Lovable
 
-Direct GitHub URL import is unavailable while this repository is private. Export and upload one deterministic ZIP:
+Direct GitHub URL import is unavailable while this repository is private. Export the curated general-use profile:
+
+```bash
+python3 scripts/export_lovable.py --profile general-use --output dist/lovable --check
+```
+
+The exporter writes one `<skill>.zip` and `<skill>.manifest.json` per selected skill, plus `dist/lovable/index.json`. The index is the machine-readable import list with descriptions, ZIP names, file counts, and SHA-256 tree hashes.
+
+In Lovable, open the target project and go to `Settings -> Skills -> Add -> Upload ZIP`. Upload each individual skill ZIP. Keep the ZIP's wrapping `<skill>/` directory. Do not upload `index.json` or sidecar manifests as skills. Verify the skill appears in the project's enabled skills after each upload.
+
+For GitHub Actions, open the successful `validate-skills` workflow run, download the `lovable-general-use` artifact, unzip the bundle locally, then upload each individual skill ZIP through `Settings -> Skills -> Add -> Upload ZIP`.
+
+The profile excludes desktop/browser operators, Orca/Paseo/provider routing, MCP or named CLI dependencies, cloud administration, remote sandboxes, security offense/reverse engineering, private project workflows, publishing, and required live research. It never includes `computer-use` or `pentest-tools`. See [`catalog/lovable-general-use.json`](../catalog/lovable-general-use.json) for the stable allowlist and exclusion reasons.
+
+For one compatible package outside the profile, explicit export remains supported:
 
 ```bash
 python3 scripts/export_lovable.py playwright --output dist/lovable --check
 ```
-
-The exporter writes `playwright.zip` and `playwright.manifest.json`. It rejects blocked or over-limit packages before writing.
 
 ## Verification after installation
 
